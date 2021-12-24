@@ -1,0 +1,5362 @@
+PRINT HELLO WORLD
+
+public class Main {
+    public static void main(String[] args) {
+      
+        System.out.println("hello world");
+      
+    }
+  }
+--------------------------------------------------------------------------------------------------------
+Ternary Operator in Java                          
+							
+//import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      
+        int a=25;
+        int b=(a>20)?5:2;
+        System.out.println(b);  //it will give 5
+    }
+  }
+//import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      
+        int a=45;
+        String b=(a>40)?"Passed":"Failed";
+        System.out.println(b);
+    }
+  }
+
+------------------------------------------------------------------------------------------------------------
+Nested Ternery Operators
+
+//import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      
+        int a=99;
+        char b=a>90?'S':a<90 && a>80 ?'A':a<80 && a>70 ?'B':'C';
+        System.out.println(b);
+    }
+  }
+--------------------------------------------------------------------------------------------------------------
+Reading Input from User
+
+String-----nextLine()
+Integer---nextInt()
+character-next.charAt(0)
+
+import java.util.*;
+public class Main
+ {
+    public static void main(String[] args) {
+ System.out.println("write a number:");
+ Scanner input=new Scanner(System.in);
+ String a=input.nextLine();   //differs for each type if thing
+ System.out.println(a);
+----------------------------------------------------------
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+ System.out.println("write a number:");
+ Scanner input=new Scanner(System.in);
+ int a=input.nextInt();           //2
+System.out.println(a+"how are you");//it will give you 2how are you
+  }
+}
+
+---------------------------------------------------------------------------------------------------------------
+If else Statements
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+ System.out.println("write a number:");
+ Scanner input=new Scanner(System.in);
+ int a=input.nextInt();
+ if(a>40 && a<100)
+ {
+   System.out.println("yes you will Pass");
+ }
+ else if(a<0 || a>100)
+ {
+   System.out.println("you are writing an invalid number");
+ }
+ else{
+   System.out.println("Sorry,you are Failed");
+ }    
+  }
+}
+--------------------------------------------------------------------------------------------------------------------
+Switch Case
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+ System.out.println("write a number:");
+ Scanner input=new Scanner(System.in);
+ int a=input.nextInt();
+ switch(a)
+ {
+   case 1:
+   System.out.println("one");
+   break;
+   case 2:
+   System.out.println("two");
+   break;
+   default:
+   System.out.println("other than 1 or 2");
+    break;
+ }
+  }
+}
+-------------------------------------------------------------------------------------------------------------------
+For loop
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+ System.out.println("write a number:");
+ Scanner input=new Scanner(System.in);
+ int a=input.nextInt();
+for(int i=0;i<a;i++)
+{
+  System.out.println("hello");
+}
+  }
+}
+---------------------------------------------------------------------------------------------------------------------
+While loop
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+ System.out.println("write a number:");
+ Scanner input=new Scanner(System.in);
+ int a=input.nextInt();
+while(a<5)
+{
+  System.out.println("hello");
+  a++;
+  
+}
+  }
+}
+--------------------------------------------------------------------------------------------------------------------------
+do while loop
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+ System.out.println("write a number:");
+ Scanner input=new Scanner(System.in);
+ int a=input.nextInt();
+do
+{
+  System.out.println("hello");
+  a++;
+  
+}while(a<5);
+  }
+}
+
+------------------------------------------------------------------------------------------------------------------------------
+Math Library in Java
+
+min(a,b)
+max(a,b)
+pow(a,b)  //gives like x.0
+Sqrt(a,b) //gives like x.0
+random() //randomly generates +ve double values which are greater than equal to zero and less than 1
+ceil(double a)  //gives like x.0
+floor(double a)
+round(double a)
+
+import java.util.*;
+import java.lang.Math;
+public class Main {
+    public static void main(String[] args) {
+ System.out.println("write the two numbers:");
+ Scanner input=new Scanner(System.in);
+ int a=input.nextInt();
+ int b=input.nextInt();
+ int c=81;
+ double d=3.56;
+ double e=3.56789;
+ System.out.println(Math.min(a, b));
+ System.out.println(Math.max(a, b));
+ System.out.println(Math.pow(a, b));
+ System.out.println(Math.sqrt(c));
+ System.out.println(Math.ceil(d));
+ System.out.println(Math.round(e));
+ System.out.println(Math.round(e*1000.0)/1000.0); //to round upto 2 digits
+ System.out.println(Math.random());
+}
+}
+--------------------------------------------------------------------------------------------------------------------------------
+Random function
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Random rand=new Random();   
+      int result=rand.nextInt();
+      System.out.println(result);     // gives very big integer values of +ve and -ve
+	
+}
+}
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Random rand=new Random();
+      int result=rand.nextInt(500);
+      System.out.println(result);      //random values from 0 to 500
+}
+}
+NOTE:you can also get boolean,double values and other typf things just by changing the nextInt to any thing
+--------------------------------------------------------------------------------------------------------------------------------
+Java Conversion
+
+String to integer
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+     String test="23";
+     int result=Integer.parseInt(test);
+      System.out.println(result+2);
+}
+}
+
+Integer to String
+
+import java.util.*;
+public class Main 
+{
+    public static void main(String[] args) {
+     int test=23;
+     String result=Integer.toString(test);
+      System.out.println(result+" "+2);
+}
+}
+
+String to char
+
+import java.util.*;
+public class Main 
+{
+    public static void main(String[] args) {
+     String test="adithya";
+     char result=test.charAt(0);       //change the digit to which you want a character of that particular index
+      System.out.println(result);
+}
+}
+NOTE:cant do test[0] to get 'a' like in cpp
+
+Character to String
+
+import java.util.*;
+public class Main 
+{
+    public static void main(String[] args) {
+     char test='a';
+     String result=Character.toString(test);
+      System.out.println(result+"ditya");
+}
+}
+
+Character to integer
+
+import java.util.*;
+public class Main 
+{
+    public static void main(String[] args) {
+     char test='1';
+     int result=Character.getNumericValue(test);
+      System.out.println(result+2);
+}
+}
+
+double to int 
+
+import java.util.*;
+public class Main 
+{
+    public static void main(String[] args) {
+     double test=3.14;
+     int result=(int)test;
+      System.out.println(result+2);
+}
+}
+int to double
+
+import java.util.*;
+public class Main 
+{
+    public static void main(String[] args) {
+     int test=3;
+     double result=test;
+      System.out.println(result+2);  //5.0
+}
+}
+-------------------------------------------------------------------------------------------------------------------------------------
+continue statements
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+      int sum=0;
+     Scanner input=new Scanner(System.in);
+     int a=input.nextInt();
+     for(int i=0;i<a;i++)
+     {
+       int b=input.nextInt();
+       if(b%2==0)
+       {
+         continue;
+       }
+       sum+=b;
+     }
+     System.out.println(sum);
+}
+}
+-------------------------------------------------------------------------------------------------------------------------------------
+Arrays
+
+int a[]=new int[5]   // the way we assign an array
+int []a=new int[5]    // another way
+int a[]
+a=new int[5]          //another way
+int []a,b,c,d         // 4 arrays are created but int a[],b,c says only a is array and b,c are normal integers
+int a[]={1,2,3,4,5,6,7}
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+      int a[]={1,2,3,4,5};
+      for(int x:a)                            //enhanced for loop
+      {
+        System.out.println(x);
+      }
+}
+}
+-----------------
+Giving input values to array
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+      Scanner input=new Scanner(System.in);
+      int a[]=new int[5];
+      for(int i=0;i<5;i++)
+      {
+        a[i]=input.nextInt();
+      }
+}
+}
+---------------
+Array length
+System.out.println(a.length);
+------------------------------------------------------------------------------------------
+Function
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+      Scanner input=new Scanner(System.in);
+      int n=input.nextInt();
+      int a[]=new int[n];
+      for(int i=0;i<n;i++)
+      {
+        a[i]=input.nextInt();
+      }
+     display(a);
+}
+  public static void display(int a[])
+  {
+    for(int x:a)                            //enhanced for loop
+      {
+        System.out.println(x);
+      }
+  }
+}
+-------------------
+return function
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+      int a[]=returnarray();
+      for(int x:a)                            //enhanced for loop
+      {
+        System.out.println(x);
+      }
+    
+}
+  public static int[] returnarray()    //keep in mind that int[] should be same as the return value and int[][] for 2d arrays
+  {
+    int marks[]={1,2,3,4,5};
+    return marks;
+  }
+}
+-----------------------------------------------------------------------------------------
+Anoynmous arrays
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+      Scanner input=new Scanner(System.in);
+     display(new int[] {1,2,3,4,5});
+}
+  public static void display(int a[])
+  {
+    for(int x:a)                            //enhanced for loop
+      {
+        System.out.println(x);
+      }
+  }
+}
+--------------------------------------------------------------------------------------
+pass by reference in java
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+      int a[]={1,2,3,4,5};
+     display(a);
+     for(int x:a)
+      {
+        System.out.println(x);   //1,999,3,4,5
+      }
+}
+  public static void display(int a[])
+  {
+    a[1]=999;
+  }
+}
+---------------------------------------------------------------------------------------
+Sorting
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+      int a[]={1,2,4,5,0,10};
+      Arrays.sort(a);
+     for(int x:a)
+      {
+        System.out.println(x);
+      }
+}
+}
+------------------------------------------------------------------------------------------
+2D arrays
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+      int a[][]=new int[2][2];
+      System.out.println(a.length);
+}
+}
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+      int a[][]={{1,2},{3,4,5}};
+      System.out.println(a[1].length);
+}
+}
+----------------------------------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+      Scanner input=new Scanner(System.in);
+      int a[][]=new int[2][2];
+      for(int i=0;i<a.length;i++)
+      {
+        for(int j=0;j<a[i].length;j++)
+        {
+          a[i][j]=input.nextInt();
+        }
+      }
+      for(int k[]:a)
+      {
+        for(int x:k)
+        {
+          System.out.println(x);
+        }
+      }
+      
+}
+}
+-----------------------------------------------------------------------------------------------
+Jagged arrays
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+      Scanner input=new Scanner(System.in);
+      int a[][]=new int[3][];
+      a[0]=new int[]{1,2,3};
+      a[1]=new int[]{1,2,3,4};
+      a[2]=new int[]{4,4,4};     
+}
+}
+-------------------------------------------------------------------------------------------------
+Strings in Java
+
+Length
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+     String a="hello";
+     System.out.println(a.length());
+}
+}
+------------------------------------------
+Concatination
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+     String a="hello";
+     System.out.println(a.concat("b"));
+     System.out.println(a+"b");
+}
+}
+--------------------------------------------
+Boolean return for seeing if both are equal or not
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+     String a="hello";
+     String b="Hello";
+     System.out.println(a.equals(b));
+}
+}
+---------------------------------------------
+String comparing
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+     String a="hello";
+     String b="Hello";                              //if both are equal then 0 if a<b then -ve if a>b +ve
+     System.out.println(a.compareTo(b));
+}
+}
+----------------------------------------------
+Substring in Java
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+     String a="hello";
+     System.out.println(a.substring(1,4));       [)
+}
+}
+---------------------------------------------------
+Trimming the String
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+     String a="      hello         ";
+     System.out.println(a.trim());   // remove the spaces
+}
+}
+--------------------------------------------------
+Replacing the String
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+     String a="hello";
+     System.out.println(a.replace('h','a'));     // aello
+}
+}
+--------------------------------------------------
+Searching for an index
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+     String a="hello";
+     System.out.println(a.indexOf('l'));   // if not present it wil give you -1
+}
+}
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+     String a="hello";
+     String b="llo";
+     System.out.println(a.indexOf(b));
+}
+}
+---------------------------------------------
+Converting to upper and lower case
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+     String a="hello";
+     System.out.println(a.toUpperCase());
+     System.out.println(a.toLowerCase());
+}
+}
+---------------------------------------------
+for empty string a.isEmpty()
+----------------------------------------------
+Converting character array to string
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+     char a[]={'a','b','c','d'};
+     String b=new String(a);
+     System.out.println(b);
+
+}
+}
+------------------------------------------
+Converting string to char array
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+   String a="aditya";
+   char b[]=a.toCharArray();
+   for(char x:b)
+   {
+     System.out.println(x);
+   }
+}
+}
+-----------------------------------------------
+Checking if a word is prsent in the sentence
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+   String a="aditya is a playboy";
+   
+   System.out.println(a.contains("playboy"));
+}
+}
+-----------------------------------------------
+Splitting a sentence
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+   String a="aditya is a playboy";
+   String b[]=a.split(" ");
+        
+}
+}
+------------------------------------------------------------------------------------------------------------------------------------------------
+OOPS-Objects and Classes
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) 
+{
+   students adi=new students();
+   adi.addinfo();
+   adi.show();
+}
+}
+class students
+{
+    Scanner input=new Scanner(System.in);
+    String name;
+    String registration;
+    public void addinfo()
+    {
+        System.out.println("enter the name:");
+        name=input.nextLine();
+        System.out.println("enter the registration_number:");
+        registration=input.nextLine();
+    }
+    public void show()
+    {
+	System.out.println(this.name());                      //it will give the current name with which its created
+        System.out.println(name+" "+registration);
+    }
+}
+------------------------------------------------------------
+Private access specifiers can only be accesses by its own class not by anyother classes in its own package or diffeent packages
+class Test {
+  private int age;
+  private String name;
+  public void setAge(int age) {
+    this.age = age;
+  }
+  public void setName(String name) {
+    this.name = name;
+  }
+  public int getAge() {
+    return this.age;
+  }
+  public String getName() {
+    return this.name;
+  }
+}
+class Main {
+  public static void main(String[] args) {
+    Test test = new Test();
+    test.setAge(24);
+    test.setName("Programiz");
+    System.out.println("Age: " + test.getAge());
+    System.out.println("Name: " + test.getName());
+  }
+}
+
+Default access specifiers can be accessed in its own package but not by other packages
+Default access would come if you dont specify if its public or private or protected
+
+Protected can be acceesed by the things that inherited or can be used in the same package
+------------------------------------------------------------
+With arrays
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+   students fog[]=new students[4];
+   for(int i=0;i<4;i++)
+   {
+       fog[i]=new students();
+   }
+   for(int i=0;i<4;i++)
+   {
+       fog[i].addinfo();
+   }
+   for(int i=0;i<4;i++)
+   {
+       fog[i].show();
+   }
+}
+}
+
+class students
+{
+    Scanner input=new Scanner(System.in);
+    String name;
+    String registration;
+    public void addinfo()
+    {
+        System.out.println("enter the name:");
+        name=input.nextLine();
+        System.out.println("enter the registration_number:");
+        registration=input.nextLine();
+    }
+    public void show()
+    {
+        System.out.println(name+registration);
+    }
+}
+-------------------------------------------------------------------
+Sort array OOPS
+
+Sorting an array using bubble sort in classes and objects
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+  students s[]=new students[2];
+  for(int i=0;i<s.length;i++)
+  {
+    s[i]=new students();
+  }
+  for(int i=0;i<s.length;i++)
+  {
+    s[i].set();;
+  }
+sort(s);
+}
+public static void sort(students s[])
+{
+  students temp;
+  for(int i=0;i<s.length-1;i++)
+  {
+    for(int j=0;j<s.length-1-i;j++)
+    {
+      if(s[j].name.compareTo(s[j+1].name)>0)
+      {
+        temp=s[j];
+        s[j]=s[j+1];
+        s[j+1]=temp;
+      }
+    }
+  }
+  for(students k:s)
+  {
+    System.out.println(k.name+k.reg_no+k.address);
+  }
+}
+}
+class students
+{
+  public String name;
+  public String reg_no;
+  public String address;
+  public void set()
+  {
+    Scanner input=new Scanner(System.in);
+    System.out.println("Please enter the name,reg_no,address");
+    name=input.nextLine();
+    reg_no=input.nextLine();
+    address=input.nextLine();
+  }
+  public void show()
+  {
+    System.out.println(name+reg_no+address);
+  }
+}
+----------------------------------------------------------
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+  students s[]=new students[2];
+  for(int i=0;i<s.length;i++)
+  {
+    s[i]=new students();
+  }
+  for(int i=0;i<s.length;i++)
+  {
+    s[i].set();;
+  }
+students.sort(s);
+}
+}
+class students
+{
+
+    
+  public String name;
+  public String reg_no;
+  public String address;
+  public static void sort(students s[])
+{
+  students temp;
+  for(int i=0;i<s.length-1;i++)
+  {
+    for(int j=0;j<s.length-1-i;j++)
+    {
+      if(s[j].name.compareTo(s[j+1].name)>0)
+      {
+        temp=s[j];
+        s[j]=s[j+1];
+        s[j+1]=temp;
+      }
+    }
+  }
+  for(students k:s)
+  {
+    k.show();
+  }
+}
+  public void set()
+  {
+    Scanner input=new Scanner(System.in);
+    System.out.println("Please enter the name,reg_no,address");
+    name=input.nextLine();
+    reg_no=input.nextLine();
+    address=input.nextLine();
+  }
+  public void show()
+  {
+    System.out.println(name+reg_no+address);
+  }
+}
+-------------------------------------------------------------------
+Constructors
+
+Default
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+   students hero=new students();
+}
+}
+
+class students
+{
+    Scanner input=new Scanner(System.in);
+    String name;
+    String registration;
+    public students()
+    {
+        name="chiru";
+        registration="18bceMega";
+        System.out.println(name+" "+registration);
+    }
+    public void addinfo()
+    {
+        System.out.println("enter the name:");
+        name=input.nextLine();
+        System.out.println("enter the registration_number:");
+        registration=input.nextLine();
+    }
+    public void show()
+    {
+        System.out.println(name+registration);
+    }
+}
+---------------------------
+Parameterized
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+   students hero=new students("adithya","18bce2284");
+}
+}
+
+class students
+{
+    Scanner input=new Scanner(System.in);
+    String name;
+    String registration;
+    public students(String a,String b)
+    {
+        name=a;
+        registration=b;
+        System.out.println(name+" "+registration);
+    }
+    public void addinfo()
+    {
+        System.out.println("enter the name:");
+        name=input.nextLine();
+        System.out.println("enter the registration_number:");
+        registration=input.nextLine();
+    }
+    public void show()
+    {
+        System.out.println(name+registration);
+    }
+}
+-----------------------
+constructor overloading
+keeping both parameterzed and defualt constructers is called constructor overloading
+----------------------------------------------------------------------------------
+Copy COnstructor
+
+Java copy Constructor
+
+1.	//Java program to initialize the values from one object to another  
+2.	class Student6{  
+3.	    int id;  
+4.	    String name;  
+5.	    //constructor to initialize integer and string  
+6.	    Student6(int i,String n){  
+7.	    id = i;  
+8.	    name = n;  
+9.	    }  
+10.	    //constructor to initialize another object  
+11.	    Student6(Student6 s){  
+12.	    id = s.id;  
+13.	    name =s.name;  
+14.	    }  
+15.	    void display(){System.out.println(id+" "+name);}  
+16.	   
+17.	    public static void main(String args[]){  
+18.	    Student6 s1 = new Student6(111,"Karan");  
+19.	    Student6 s2 = new Student6(s1);  
+20.	    s1.display();  
+21.	    s2.display();  
+22.	   }  
+23.	}  
+
+Complex c1 = new Complex(10, 15);
+          
+        // Following involves a copy constructor call
+        Complex c2 = new Complex(c1);   
+----------------------------------------------------------------------------------
+Packages
+
+--------------------------------------------------------------------
+Access Specifiers 
+----------------------------------------------------------------------
+Static member and method
+--------------------------------------------------------------------
+INHERITENCE
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+   students hero=new students("adithya","18bce2284","test","test");
+   hero.login();
+   hero.show();
+}
+}
+class classic
+{
+    protected String name;
+    protected String username;
+    protected String password;
+public void login()
+{
+    Scanner input=new Scanner(System.in);
+    String a,b;
+    System.out.println("write the username and password:");
+    a=input.nextLine();
+    b=input.nextLine();
+if(a.equals(username) && b.equals(password))
+{
+    System.out.println("you are welcome,Sir");
+}
+else{
+    System.out.println("Please fuckoff,Sir");
+    System.out.println(a+b);
+}
+}
+}
+class students extends classic
+{
+    Scanner input=new Scanner(System.in);
+    String registration;
+    public students(String a,String b,String c,String d)
+    {
+        name=a;
+        registration=b;
+        username=c;
+        password=d;
+    }
+    public void addinfo()
+    {
+        
+        System.out.println("enter the username:");
+        name=input.nextLine();
+        System.out.println("enter the password:");
+        registration=input.nextLine();
+    }
+    public void show()
+    {
+        System.out.println(username+password);
+    }
+}
+
+NOTE:THE IMPORTANT THING IS IF CLASSIC HAS A PRIVATE THING THAT CANT BE ACCESSED BY STUDENTS BUT PUBLIC AND PROTECTED ARE OK
+IF THERE ARE TWO DEFAULT CONSTRUCTERS ON STUDENT AND CLASSIC
+FIRST CLASSIC WILL BE PRINTED AND THEN STUDENTS
+------------------------------------------------------------------------------------------------------------------------------
+Inheritence extra
+
+interface Animal{}
+class Mammal implements Animal{}
+
+public class Dog extends Mammal {
+
+   public static void main(String args[]) {
+      Mammal m = new Mammal();
+      Dog d = new Dog();
+
+      System.out.println(m instanceof Animal);
+      System.out.println(d instanceof Mammal);
+      System.out.println(d instanceof Animal);
+   }
+}
+This will produce the following result −
+Output
+true
+true
+true
+-------------------------------------------------------------------------------------------------------------------------------
+Order of Constructor calls in Inheritance
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+   students hero=new students("adithya","18bce2284","test","test",5);
+   hero.login();
+   hero.show();
+}
+}
+class classic
+{
+    protected int a;
+    protected String name;
+    protected String username;
+    protected String password;
+    classic(int num)
+    {
+        a=num;
+    }
+public void login()
+{
+    Scanner input=new Scanner(System.in);
+    String a,b;
+    System.out.println("write the username and password:");
+    a=input.nextLine();
+    b=input.nextLine();
+if(a.equals(username) && b.equals(password))
+{
+    System.out.println("you are welcome,Sir");
+}
+else{
+    System.out.println("Please fuckoff,Sir");
+    System.out.println(a+b);
+}
+}
+}
+class students extends classic
+{
+    Scanner input=new Scanner(System.in);
+    String registration;
+    public students(String a,String b,String c,String d,int e)
+    {
+        super(e);                          //this e would be go to the classic and it would go to its parametirized constructor which is a
+        name=a;
+        registration=b;
+        username=c;
+        password=d;
+    }
+    public void addinfo()
+    {
+        
+        System.out.println("enter the username:");
+        name=input.nextLine();
+        System.out.println("enter the password:");
+        registration=input.nextLine();
+    }
+    public void show()
+    {
+        System.out.println(username+password);
+    }
+}
+----------------------------------------------
+Super Keyword
+
+------------------------------------------------
+Method Overloading               // it happens during compilation time
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+   students hero=new students();
+   System.out.println(hero.add(1,2));
+   System.out.println(hero.add(1,2,3));
+}
+}
+class students
+{
+    public int add(int num1,int num2,int num3)
+    {
+        int result=num1+num2+num3;
+        return result;
+    }
+    public int add(int num1,int num2)
+    {
+        int result=num1+num2;
+        return result;
+    } 
+}
+---------------------------------------------
+Method Overriding 		//it happens during run time
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+   students hero=new students();
+   hero.display();
+}
+}
+class classic
+{
+    protected int a;
+    public classic()
+    {
+       a=10;
+    }
+    public void display()
+    {
+        System.out.println("super class");
+    }
+}
+class students extends classic
+{
+    protected int a=20;
+    public students()
+    {
+        a=20;
+    }
+    public void display()
+    {
+        System.out.println("sub class");
+    }
+}
+
+
+NOTE:SUB CLASS WILL BE PRINTED AND IT OVERRIDE THE SUPER CLASS AKA CLASSIC
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+   students hero=new students();
+   hero.display();  //20 would be printed that dosent means its overrided
+}
+}
+class classic
+{
+    protected int a;
+    public classic()
+    {
+       a=10;
+    }
+    public void display()
+    {
+        System.out.println(a);
+    }
+}
+class students extends classic
+{
+    protected int a=20;
+    public students()
+    {
+        a=20;
+    }
+    public void display()
+    {
+	super.display()            //it will invoke the super class and it will be printed first
+        System.out.println(a);
+        System.out.println(super.a); // super is the ket word to access the integer from the super class
+    }
+}
+
+NOTE:super keyword can access anything but private 
+---------------------------------------------
+Final Keyword
+
+if you use final you cant inherit it(final class classic)
+you cant override it(public final display())
+you can change it (final int a=10)
+
+-------------------------------------------------
+Garbage collector
+
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+   students hero=new students("hello","world");
+   hero=null;
+    System.gc(); or Runtime.getRuntime().gc();
+}
+}
+
+class students 
+{
+    String name;
+    String registration;
+    public students(String a,String b)
+    {
+        name=a;
+        registration=b;
+    }
+    public void display()
+    {
+        System.out.println(name+registration);
+    }
+    @Override
+    protected void finalize() throws Throwable{
+        System.out.println("finalize has been called");
+    }
+}
+------------------------------------------------------
+Overload main method in java
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        for(int i=0;i<args.length;i++)
+        {
+            System.out.println(args[i]);
+        }
+
+   Main.main(1,2);
+}
+}
+
+public static void main(int a,int b) {
+    System.out.println(a+b);
+}
+-----------------------------------------------------------
+Static variables
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+   students adi=new students();
+   adi.addinfo();
+   adi.show();
+}
+}
+class students
+{
+    Scanner input=new Scanner(System.in);
+    String name;
+    String registration;
+    public static String university="VIT vellore";
+    public void addinfo()
+    {
+        System.out.println("enter the name:");
+        name=input.nextLine();
+        System.out.println("enter the registration_number:");
+        registration=input.nextLine();
+        
+    }
+    public void show()
+    {
+        System.out.println("University:"+university);
+    }
+}
+---------------------------------------------------------
+Static method
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+   students adi=new students();
+   adi.addinfo();
+   adi.show();
+   students.know();                                    //remember raa lanjaa you can call directly without creating objevt so that we can save space
+}
+}
+class students
+{
+    Scanner input=new Scanner(System.in);
+    String name;
+    String registration;
+    public static String university="VIT vellore";
+    public static int count=0;               //static integer
+    students()
+    {
+        count++;
+    }
+    public void addinfo()
+    {
+        System.out.println("enter the name:");
+        name=input.nextLine();
+        System.out.println("enter the registration_number:");
+        registration=input.nextLine();
+        
+    }
+    public static void know()                      //static function
+    {
+        System.out.println(count);
+    }
+    public void show()
+    {
+        System.out.println("University:"+university);
+    }
+}
+NOTE:
+ONLY STATIC VAIABLES ARE ACCESSED INSIDE THE STATIC METHOD(know())
+THEY CAN BE OVERLOADED BUT CANT BE OVERRIDEN
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+   students adi=new students();
+   adi.addinfo();
+   adi.show();
+   
+}
+}
+class students
+{
+    Scanner input=new Scanner(System.in);
+    String name;
+    String registration;
+    public static String university="VIT vellore";
+    public static int count=0;
+    students()
+    {
+        count++;
+    }
+    public void addinfo()
+    {
+        System.out.println("enter the name:");
+        name=input.nextLine();
+        System.out.println("enter the registration_number:");
+        registration=input.nextLine();
+        
+    }
+    public static void know()
+    {
+        System.out.println(count);
+    }
+    public void show()
+    {
+        students.know();
+        System.out.println("University:"+university);
+    }
+}
+-------------------------------------------------------------
+Static block
+
+import java.util.*;
+public class Main
+{
+    static int a;
+  static int b;
+  static int c;
+  static{
+      a=1;
+      b=2;
+      c=3;
+  }
+    public static void main(String[] args) {
+  
+  System.out.println(a+b+c);
+   
+}
+}
+----------------------------------------------------------------
+Nested classes(Non-static)-Inner classes
+
+The inner class can access the private,protected,static variables of the outer class
+Its considered as a normal data member for the outside data class, you can say it as private,public,static
+
+import java.util.*;
+public class Main{
+public static void main(String[] args) {
+outer obj=new outer();
+outer.inner obj1=obj.new inner();
+obj1.display();
+obj.display_inner();
+} }
+class outer  //iner class,The class that is non staic is called an inner class
+{
+    public String a;
+    private String b;
+    protected String c;
+    public static int count=1;
+    public outer()
+    {
+        a="hello";
+        b="world";
+        c=" enjoying!";
+    }
+    public class inner
+    {
+	public static int count1=1; //inner class cant have any static classes
+        int inner_variable;
+        public inner()
+        {
+            inner_variable=100;
+        }
+        public void display()
+        {
+            System.out.println(a+b+c+count);
+        }
+	public static void test()
+	{
+		System.out.println("is it allowed to have a Static function"); //No its not allowed inside inner class
+	}
+    }
+    public void display_inner()
+    {
+        System.out.println(inner_variable); //outer class cant access a inner variable
+    }
+}
+An example
+
+import java.util.*;
+public class Main{
+public static void main(String[] args) {
+outer obj=new outer("Adithya Bokkisum","18BCE2284");
+outer.inner obj1=obj.new inner("VIT",9,2022);
+obj1.display();
+} }
+class outer
+{
+    public String name;
+    private String emp_id;
+    public outer(String a,String b)
+    {
+        name=a;
+        emp_id=b;
+    }
+    public class inner
+    {
+       String college;
+       int cgpa;
+       int graduation;
+        public inner(String a,int b,int c)
+        {
+            college=a;
+            cgpa=b;
+            graduation=c;
+        }
+        public void display()
+        {
+            System.out.println("Name:"+name);
+            System.out.println("Employee Id:"+emp_id);
+            System.out.println("College:"+college);
+            System.out.println("CGPA:"+cgpa);
+            System.out.println("Graduation Year:"+graduation);
+        }
+    }
+}
+
+Creating Multiple degree
+
+import java.util.*;
+public class Main{
+public static void main(String[] args) {
+outer obj=new outer("Adithya Bokkisum","18BCE2284");
+outer.inner obj1[]=new outer.inner[2];
+Scanner input=new Scanner(System.in);
+for(int i=0;i<obj1.length;i++)
+{
+    String clg_name;
+    int cgpa;
+    int graduation;
+    System.out.println("Please enter the college name:");
+    clg_name=input.nextLine();
+    System.out.println("Please enter the cgpa");
+    cgpa=input.nextInt();
+    System.out.println("Please enter the Graduation year:");
+    graduation=input.nextInt();
+    obj1[i]=obj.new inner(clg_name,cgpa,graduation);
+}
+obj.display_details(obj1);
+} }
+class outer
+{
+    public String name;
+    private String emp_id;
+    public outer(String a,String b)
+    {
+        name=a;
+        emp_id=b;
+    }
+    public class inner
+    {
+       String college;
+       int cgpa;
+       int graduation;
+        public inner(String a,int b,int c)
+        {
+            college=a;
+            cgpa=b;
+            graduation=c;
+        }
+        
+    }
+    public void display_details(inner a[])
+    {
+        System.out.println("Empployee_name:"+name);
+        System.out.println("Employee ID:"+emp_id);
+        for(inner k:a)
+        {
+            System.out.println("College name"+k.college+" Cgpa:"+k.cgpa+" Graduation:"+k.graduation);
+        }
+    }
+}
+----------------------------------------------------------------------
+Static nested classes
+
+No need to crate an object of the outer class to access the inner class
+
+import java.util.*;
+public class Main{
+public static void main(String[] args) {
+outer.inner.display();  //no need of object to access static variables/classes
+} }
+class outer
+{
+    public String name;
+    private String emp_id;
+    public static int count=5;
+    public outer(String a,String b)
+    {
+        name=a;
+        emp_id=b;
+    }
+    public static class inner
+    {
+      public static String college="VIT";
+      public static int cgpa=9;
+      public static int graduation=2025;
+     public static void display(){
+         System.out.println(college+" "+cgpa+" "+graduation);
+	System.out.println(name); //can't be accesses because its a non static class
+	System.out.println(count);//it can be accessed because its a static class 
+     }
+	public void test()
+	{
+		System.out.println(name);//even though its a non static function since its inside a static class it can't acess
+	}    
+    }
+}
+
+we can have non static variables inside a static class
+
+import java.util.*;
+public class Main{
+public static void main(String[] args) {
+outer obj=new outer("Adithya","18bce2284");
+obj.n1.display_non();
+} }
+class outer
+{
+    public String name;
+    private String emp_id;
+    public outer(String a,String b)
+    {
+        name=a;
+        emp_id=b;
+    }
+    public static class inner
+    {
+      public static String college="VIT";
+      public static int cgpa=9;
+      public static int graduation=2025;
+      public String test="hello i am working";
+     public void display_non()
+     {
+         System.out.println(test);
+     }   
+    }
+    inner n1=new inner(); // creating an object to inner static class to access it
+}
+--------------------------------------------------------
+Constructor calls in multi level inheritence
+import java.util.*;
+public class Main {
+    
+    public static void main(String[] args)
+    {
+      subsubclass s1=new subsubclass(10,20,30);    
+}
+}
+class superclass{
+  protected int a;
+  public superclass(int a)
+  {
+    this.a=a;
+    System.out.println(a);
+  }
+}
+class subclass extends superclass{
+  private int c;
+  public subclass(int b,int c)
+  {
+    super(b);
+    this.c=c;
+    System.out.println(c);
+  }
+}
+class subsubclass extends subclass{
+   int c;
+  public subsubclass(int a,int b,int c)
+  {
+    super(a, b);
+    this.c=c;
+    System.out.println(c);
+  }
+}
+Output:10 20 30
+----------------------------------------------------------------------------------------------------------------------
+Abstract Classes
+
+import java.util.*;
+public class Main {
+    
+    public static void main(String[] args)
+    {
+      square s1=new square();
+      s1.computearea();
+      s1.display();     
+    }
+}
+abstract class shape{
+  protected double area;
+  public abstract void computearea();
+  public void display()
+  {
+    System.out.println(area);
+  }
+}
+class square extends shape{
+  int side;
+  public square()
+  {
+    side=10;
+  }
+  @Override
+  public void computearea()
+  {
+    area=side*side;
+  }
+}
+NOTE:
+until u provide the correct values to all ur abstract methods ur class wont be a concrete classses
+Abstract classes wont have abstract static method
+but you can inherit a staic function from a staic class
+you cant have abstract constructers
+you cant create objects for abstract classes
+------------------------------------------------------------------------------------------------------------------------------------
+DYNAMIC POLYMORPHISM
+
+import java.util.*;
+public class Main {
+    
+    public static void main(String[] args)
+    {
+      shape s=new square();        //upcasting
+      s.display();                 //display from square would be called
+      shape s1=new circle();
+      s1.display();               //display from circle would be called
+    }
+}
+class shape{
+  public void display()
+  {
+    System.out.println("Hi i am shape");
+  }
+}
+class square extends shape{
+  public void display()
+  {
+    System.out.println("Hi i am square");
+  }
+   
+}
+class circle extends shape{
+  public void display()
+  {
+    System.out.println("Hi i am circle");
+  }
+   
+}
+NOTE:This type of display function interswithching in the run time is called dynamic POLYMORPHISM
+---------------------------------------------------------------------------------------------------------------------------------
+Intermixing abstract classes and POLYMORPHISM
+
+import java.util.*;
+public class Main {
+    
+    public static void main(String[] args)
+    {
+        shape s[]=new shape[2];
+        s[0]=new square();          //upcasting
+        s[1]=new circle();           //upcasting
+        for(int i=0;i<2;i++)
+        {
+          s[i].computearea();        //dynamic POLYMORPHISM
+        }
+    }
+}
+
+abstract class shape{
+  protected double area;
+  public abstract void computearea();
+  public void display()
+  {
+    System.out.println(area);
+  }
+}
+class square extends shape{
+  int side;
+  public square()
+  {
+    side=10;
+  }
+  @Override
+  public void computearea()
+  {
+    area=side*side;
+    super.display();
+  }
+}
+class circle extends shape{
+  int radius;
+  public circle()
+  {
+    radius=10;
+  }
+  @Override
+  public void computearea()
+  {
+    area=3.14*radius*radius;
+    super.display();
+  }
+}
+--------------------------------------------------------------------------------------------------------------------------------------
+INTERFACES
+
+INTERFACES ARE ABSTRACT CLASSES without DEFINED Functions
+
+import java.util.*;
+public class Main {
+    
+    public static void main(String[] args)
+    {
+        square s1=new square();
+        s1.computearea();
+        s1.display();
+    }
+}
+
+interface shape{
+  void getInput();
+  void computearea();
+  void display();
+}
+class square implements shape{
+  Scanner input=new Scanner(System.in);
+  int side,area;
+  public square()
+  {
+    side=10;
+  }
+  @Override
+  public void computearea()
+  {
+    area=side*side;
+  }
+  @Override
+  public void getInput()
+  {
+    System.out.println("please enter the length");
+    side=input.nextInt();
+    
+  }
+  @Override
+  public void display()
+  {
+    System.out.println("Area:"+area);
+  }
+}
+class circle implements shape{
+  Scanner input=new Scanner(System.in);
+  int radius;
+  double area;
+  public circle()
+  {
+    radius=10;
+  }
+  @Override
+  public void computearea()
+  {
+    area=radius*radius*3.14;
+  }
+  @Override
+  public void getInput()
+  {
+    System.out.println("please enter the radius");
+    radius=input.nextInt();
+  }
+  @Override
+  public void display()
+  {
+    System.out.println("Area:"+area);
+  }
+}
+-------------------------------------------------------------------------------------------------------------------------------------
+INTRODUCTION TO EXCEPTIONS
+
+Arithmetic exception like dividing by zero
+Index outof bound exception like if you create an array of size 2 and try to reach the index 3
+
+NULL pointer exception
+
+String a=null;
+System.out.println(a.length());
+
+and
+
+shapes s[]=new shapes[4];
+s.takeInput();//its wrong because you havent created the space 
+
+you should do
+
+shapes s[]=new shapes[5];
+s[0]=new shapes();
+s.takeInput();
+
+FileNotFoundException Error
+
+File obj=new File("JAVA.txt");
+Scanner input=new Scanner(obj);
+String data=input.nextLine();
+System.out.println(data);
+
+It occurs when the file is not found in the System
+
+Class Not Found EXCEPTION
+
+If you are trying to connect the database with the help of java it uses some classses from mysql.jar which you have to download externally 
+but if you are trying to use the functions of sql.jar without having it,it gives this Error
+
+SQL exception
+
+If you are trying to access a table which is not there/restricted or any attribute from it 
+this throws the error 
+---------------------------------------------------------------------------------
+
+USE OF TRY ,THROW AND CATCH ,MULTIPLE CATCH BLOCKS, USER DEFINED EXCEPTIONS
+
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args)  {
+    try{
+    int a,b;
+   System.out.println("Please enter the two numbers:");
+   Scanner input=new Scanner(System.in);
+   a=input.nextInt();
+   b=input.nextInt();
+   System.out.println("Division of two numbers:"+(a/b));
+   System.out.println("Contact number:6303447150");
+    }
+    catch(ArithmeticException e){
+        System.out.println(e.getMessage()); //IT WILL TELL U THE Error
+        e.printStackTrace();  //IT WILL TELL U THE LINE number
+    }
+  
+}
+}
+OUTPUT:
+/ by zero
+java.lang.ArithmeticException: / by zero
+at CAT.main(CAT.java:11)
+
+---------------------------------
+
+ catch(ArithmeticException e){
+        System.out.println("Zero is not possible for division");
+        System.out.println("Contact number:6303447150");  
+    } 
+    output will be these two things
+-------------------------------------------------------------------------------
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args)  {
+    try{
+    int a,b;
+   System.out.println("Please enter the two numbers:");
+   Scanner input=new Scanner(System.in);
+   a=input.nextInt();
+   b=input.nextInt();
+   if(b==0)
+   {
+       throw new ArithmeticException("Zero is Not alowed");//we are creating our own object
+   }
+   System.out.println("Division of two numbers:"+(a/b));
+   System.out.println("Contact number:6303447150");
+    }
+    catch(ArithmeticException e){
+        System.out.println(e.getMessage()); //The upper object thing would be getting here and showing us the msg as Zero is Not allowed
+        System.out.println("Contact number:6303447150");  
+    }
+}
+}
+
+----------------------------------------------------------------
+MULTIPLE CATCH STATEMENTS
+
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args)  {
+    try{
+    int a,b;
+   System.out.println("Please enter the two numbers:");
+   Scanner input=new Scanner(System.in);
+   a=input.nextInt();
+   b=input.nextInt();
+   System.out.println("Division of two numbers:"+(a/b));
+   System.out.println("Contact number:6303447150");
+    }
+    catch(InputMismatchException d) // if you give 2,adi as input this would be activated
+    {
+        System.out.println("Please enter the correct value");
+        System.out.println("Contact number:6303447150");  
+    }
+    catch(ArithmeticException e){
+        System.out.println(e.getMessage()); 
+        System.out.println("Contact number:6303447150");  
+    }
+}
+}
+-------------------------------------------------------------
+
+USER DEFINED EXCEPTION
+
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args)  {
+    try{
+    int a,b;
+   System.out.println("Please enter the two numbers:");
+   Scanner input=new Scanner(System.in);
+   a=input.nextInt();
+   b=input.nextInt();
+   if(b==13)
+   {
+      throw new myexception("13 is a bad number dont select it");
+   }
+   System.out.println("add of two numbers:"+(a+b));
+   System.out.println("Contact number:6303447150");
+    }
+    catch(myexception a)
+    {
+       System.out.println(a.getMessage());
+    }
+    catch(InputMismatchException d)
+    {
+        System.out.println("Please enter the correct value");
+        System.out.println("Contact number:6303447150");  
+    }
+    catch(ArithmeticException e){
+        System.out.println(e.getMessage()); 
+        System.out.println("Contact number:6303447150");  
+    }
+}
+
+}
+
+class myexception extends Exception
+{
+    public myexception(String s)
+    {
+        super(s);//this super class will invoke the parameterzed constructor in our throwable class and that would be given to 
+                    getMessage()
+    }
+} 
+Whe u give 13 it will give you the message of "13 is a bad number dont select it"
+-----------------------------------------------------------------------------
+
+INHERITANCE IN EXCEPTIONS -THROWS AND FINALLY CLAUSE-NESTED TRY CATCH
+
+USER CREATED EXCEPTION
+
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args)  {
+    try{
+    int a,b;
+   System.out.println("Please enter the two numbers:");
+   Scanner input=new Scanner(System.in);
+   a=input.nextInt();
+   b=input.nextInt();
+   if(b==13)
+   {
+      throw new number13Exception("13 is a bad number dont select it");
+   }
+   if(b==15)
+   {
+       throw new number15Exception("15 is as bad as 13");
+   }
+   System.out.println("add of two numbers:"+(a+b));
+   System.out.println("Contact number:6303447150");
+    }
+    catch(Exception a)
+    {
+       System.out.println(a.getMessage());
+    }
+    catch(number13Exception a)
+    {
+       System.out.println(a.getMessage());
+    }
+    catch(number15Exception c)
+    {
+       System.out.println(c.getMessage());
+    }
+    catch(myexception a)
+    {
+       System.out.println(a.getMessage());
+    }
+    catch(InputMismatchException d)
+    {
+        System.out.println("Please enter the correct value");
+        System.out.println("Contact number:6303447150");  
+    }
+    catch(ArithmeticException e){
+        System.out.println(e.getMessage()); 
+        System.out.println("Contact number:6303447150");  
+    }
+}
+
+}
+
+class myexception extends Exception
+{
+    public myexception(String s)
+    {
+        super(s);
+    }
+} 
+class number13Exception extends myexception
+{
+    public number13Exception(String s)
+    {
+        super(s);
+    }
+} 
+class number15Exception extends myexception
+{
+    public number15Exception(String s)
+    {
+        super(s);
+    }
+} 
+NOTE:IF u dont write catch statements for 13,15 also no problem because myexception can handle it because it was driven from the same class
+      even  u can remove myexception and keep ony Exception in catch  because myexception extends Exception and it works perfectly fine
+You may think that if you combine everything with myexception how can we do some small calculations if we want to do exclusively to 
+number 13,15 and Yes we can do like that like
+
+catch(myexception a)
+    {
+        if(a instanceof number13Exception)
+        {
+            System.out.println("Please dont select 13 because");
+        }
+        if(a instanceof number15Exception)
+        {
+            System.out.println("Please dont select 13 because");
+        }
+        System.out.println(a.getMessage());
+    }
+  if a is an instance of 13 then do some small calculation and after that you will print our getMessage function()
+-------------------------------------------------------------------------------------------------------------------
+if you have both myexception and number13Exception what would be printed??
+
+if(b==13)
+   {
+      throw new number13Exception("13 is a bad number dont select it");
+   }
+   if(b==15)
+   {
+       throw new number15Exception("15 is as bad as 13");
+   }
+   System.out.println("add of two numbers:"+(a+b));
+   System.out.println("Contact number:6303447150");
+    }
+    catch(number13Exception a)
+    {
+        System.out.println(a.getMessage());
+    }
+    catch(myexception a)
+    {
+        System.out.println("I am myException");
+    }
+Note:if both are there the child class would be printed and parent class wont be printed
+      if you write the blocks in reverse way like first myexception and after that number13Exception then it will throw u error
+      because myexception is overshadowing number13Exception so there is no point of writing it
+----------------------------------------------------------------------------------------------------------------------
+
+THROWS CLAUSE
+
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args)  {
+   dividebyzero d=new dividebyzero();
+   try{
+    d.dividenumber();    
+   }
+   catch(ArithmeticException e){
+    System.out.println("YO I catched here man");
+   }
+   
+}
+}
+
+class dividebyzero{
+private int a;
+private int b;
+public dividebyzero() {
+    a=10;
+    b=0;
+}
+public void dividenumber() throws ArithmeticException{
+    System.out.println("Final Result:"+a/b);
+}
+}
+EXPLANATION:Here the throws function tells you that ArithmeticException would be thrown so that we can make a try catch block by seeing
+it but it dosent do anything,it just causes you that it may happen in near futur be ready
+public void dividenumber() throws ArithmeticException,myException{  //we can write as many exceptions we want in the throws so that
+    System.out.println("Final Result:"+a/b);                          //users would make respective try catch blocks for them
+}
+-----------------------------------------------------------------------------------------
+
+CONSTRUCTERS THROW EXCEPTIONS
+
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args)  {
+    try{
+        dividebyzero d=new dividebyzero();
+        d.dividenumber();
+    }
+   catch(ArithmeticException e){
+    System.out.println("YO I catched here man");
+   }
+   catch(InputMismatchException e){
+    System.out.println("YO I catched I/O mismatch here man");
+   }  
+}
+}
+
+class dividebyzero{
+private int a;
+private int b;
+public dividebyzero() throws InputMismatchException{
+    Scanner input=new Scanner(System.in);
+    a=input.nextInt();
+    b=input.nextInt();
+
+}
+public void dividenumber() throws ArithmeticException{
+    System.out.println("Final Result:"+a/b);
+}
+}
+--------------------------------------------------------------------------------------------
+
+FINALLY BLOCKS
+
+if your program terminates abruptly or succesflly or by catching the error the finally block would be executed because there might be some data
+thay you might be writing and if the website crashes all the wriiten file would be gone so we want to insert that file and then let the System
+crash 
+abruptly=here the finally block would be executed and then error would be shown
+after catching=the catch statement is shown then finally would be shown
+succesfuly=after succesfull program exexution finally would be shown 
+---------------------------------------------------------------------------------------------
+
+NESTED EXCEPTION
+
+public class CAT
+{
+    public static void main(String[] args)  {
+try{
+    try{
+        dividebyzero d=new dividebyzero();
+        d.dividenumber();
+    }
+    finally{
+        System.out.println("Finally I am here");
+    }
+}
+   catch(ArithmeticException e){
+    System.out.println("YO I catched here man");
+   }
+   
+}
+}
+Here if we write any wrong thing like zero in any of the variables then first finally would come after that he outer catch blocks executes
+if the outer block was not able to handle it then it crashes after printing inside finally block
+------------------------------------------------------------------------------------------------
+
+EXCEPTION CHAINING 
+
+import java.sql.SQLDataException;
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args) throws Throwable  {
+try{
+
+    throw new ArithmeticException("Divide by Zero").initCause(new SQLDataException("Sql connection is gone"));
+    
+}
+   catch(ArithmeticException e)
+   {
+    System.out.println(e.getMessage());
+    System.out.println(e.getCause());
+   }
+   
+}
+}
+Sometimes one exception may trigger another exception and may go on as a chain reaction so for dealing these types of thing we are
+throwing a ArithmeticException which is caused by sql connection as its cause so when we run this
+
+first the message would be that it was dividebyzero and then the message would be sql connection was gone as the cause
+-----------------------------------------------------------------------------------------------------------------------------------
+
+FILE HANDLING
+
+import java.io.*;
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args)   {
+    File obj=new File("Test.txt"); (RELATIVE FILE CREATION ACCORDING TO YOUR JAVA FILE)
+    System.out.println(obj.separator);//IT WILL TELL US WHAT TYPE OF SEPERATOR TO USE
+    System.out.println((obj.getName())); //IT WILL TELL US THR NAMEOF THE FILE
+    System.out.println(obj.getAbsolutePath()); //IT WILL GIVE YOU THE PATH OF THE FILE
+}
+}
+or we can directly give the path like
+File obj=new File("E:\\JAVA\\man.txt");(ABSOLUTE FILE CREATION)
+
+------------------------------------------------
+CREATING A FILE WITH PARENT AND CHILD ADDRESS
+
+File obj=new File("E:\\JAVA","Test.txt");
+-----------------------------------------------
+CRETING A FILE WITH ANOTHER FILE ADDRESS
+
+File obj=new File("E:\\JAVA");
+    File obj1=new File(obj, "Test2.txt");
+    if(obj1.createNewFile())
+    {
+        System.out.println("File has been created");//if its newly created it will show you this
+    }
+    else{
+        System.out.println("File already created"); if the file has already been created it will throw you this
+    }
+-----------------------------------------------
+Other IMPORTANT Functions in the File class
+
+  System.out.println(obj1.isFile()); //tells you if its a files or not
+    System.out.println(obj1.isDirectory());//tells you if a directory or not
+    System.out.println(obj1.exists());/if it exists or not
+    System.out.println(obj1.canRead());//can u read
+    System.out.println(obj1.canWrite());//can u write??
+    System.out.println((obj1.getName()));//get the name of the file
+    System.out.println(obj1.getParent());//get the parent(File path)(excluding the file name)
+    System.out.println(obj1.getPath());//it will give you the whole path including the file name
+    System.out.println(obj.isAbsolute());//Did we created the file absolutely or relatively
+    System.out.println(obj1.separator);//SEPERATOR we should use
+    System.out.println(obj1.getAbsolutePath());//it will give you the path
+
+    System.out.println(obj1.delete()); //deletes the file
+    System.out.println(obj1.length()); //GIVES THE SIZE OF THE FILE
+-------------------------------------
+Creating a string list so that we can print everything in our path
+
+import java.io.*;
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args) throws Throwable   {
+    File obj=new File("E:\\JAVA");
+    String a[]=obj.list();
+    for(String x:a)
+    {
+        System.out.println(x);
+    }
+}
+}
+----------------------------------------
+To get a List of file Names
+
+public static void main(String[] args) throws Throwable   {
+    File obj=new File("E:\\JAVA");
+    File a[]=obj.listFiles();
+    for(File x:a)
+    {
+      System.out.println(x.getName());
+    }
+-----------------------------------------------------------------------------------
+IO STREAMS IN FILES
+
+READ BYTES OF DATA FROM INPUT STREAMS
+
+import java.io.*;
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args) throws Throwable   {
+    File obj=new File("adithya.txt");//hello
+    FileInputStream fin=new FileInputStream(obj);
+    int number=fin.read();
+    System.out.println((char)number);
+}
+}
+
+Here h would be printed because it reads only one byte and if yu remove the (char) from the Sysout statement 104 would be printed which is
+the ANSI type of encryption
+-----------------------------------------------------
+If we want to read the whole thing in the file by one byte
+
+public static void main(String[] args) throws Throwable   {
+    File obj=new File("adithya.txt");
+    FileInputStream fin=new FileInputStream(obj);
+    int number;
+    while((number=fin.read())!=-1)
+    System.out.println((char)number);
+}
+------------------------------------------------------
+If we want to read the whole thing using an byte array
+
+File obj=new File("adithya.txt");
+    FileInputStream fin=new FileInputStream(obj);
+    byte b[]=new byte[5];
+    fin.read(b);
+    for(byte x:b)
+    {
+        System.out.println((char)x);
+    }
+    fin.close(); //closing the file so that another fileinputstream can acess the file
+
+if we want to fix the fin.read like from where it should start and how much it should take ,we can do like
+
+fin.read(b,1,2)//it says it takes from 1st index(indexing starts from 0) and 2 bits from ther which means it will take (1,2) indexes
+if we print it without char thing we will get like
+0
+104
+101
+0
+0
+-------------------------------------------------------
+Using available()
+File obj=new File("adithya.txt");//hello
+    FileInputStream fin=new FileInputStream(obj);
+    byte b[]=new byte[5];
+    fin.read(b,1,2);
+    for(byte x:b)
+    {
+        System.out.println(x);
+    }
+    System.out.println(fin.available());//it will give 3 bytes because our b has already took 2 bytes and remaining is 3 bytes 
+-----------------------------------------------------
+using finally()
+
+import java.io.*;
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args) throws IOException   {
+    try{
+    File obj=new File("adithya.txt");
+    FileInputStream fin=new FileInputStream(obj);
+    byte b[]=new byte[5];
+    fin.read(b,1,2);
+    for(byte x:b)
+    {
+        System.out.println(x);
+    }
+    }
+    catch(FileNotFoundException e)
+    {
+        e.printStackTrace();
+    }
+    finally{
+        fin.close();
+    }
+    
+}
+}
+--------------------------------------------------------------------------------
+WRITTING IN A FILE AND READING IT COMBINEDLY
+
+import java.io.*;
+import java.util.*;
+public class CAT
+{
+public static void main(String[] args) throws IOException   
+{
+    File obj=new File("file1.txt");
+    FileOutputStream fout=new FileOutputStream(obj);
+    byte b[]=new byte[5];
+    b[0]=99;
+    b[1]=100;
+    b[2]=101;
+    b[3]=102;
+    b[4]=103;
+    fout.write(b,1,3);
+    fout.close();
+    FileInputStream fin=new FileInputStream(obj);
+    int data=fin.read();
+    System.out.println(data);
+}
+}
+output:
+100
+-------------------------------------------------------------------------------
+READING THE CHARACTERS FROM THE INPUT(USING FILEREADER)
+
+File obj=new File("adi.txt");
+    FileReader fin=new FileReader(obj);
+    int number=fin.read();
+    System.out.println(number);
+-----------------------------------------------------------------------------
+public static void main(String[] args) throws IOException   {
+   try{
+        File obj=new File("adi.txt");
+    FileReader fir=new FileReader(obj);
+    char c[]=new char[5];
+    fir.read(c);
+    for(char x:c)
+    {
+        System.out.println(x);
+    }
+    fir.close();
+    }
+    catch(Exception e)
+    {
+        System.out.println(e.getMessage());
+    }
+}
+hello would be printed 
+
+File obj=new File("adi.txt");//hello
+    FileReader fir=new FileReader(obj);
+    char c[]=new char[5];
+    fir.read(c,1,2);
+    for(char x:c)
+    {
+        System.out.println(x);
+    }
+}
+"","h","e","","","" would be printed
+------------------------------------------------------------------------------
+FILEWRITER
+
+File obj=new File("adi1.txt");
+        FileWriter fiw =new FileWriter(obj);
+        fiw.write(104);
+        fiw.close();
+        h would be written
+--------------
+try{
+        File obj=new File("adi1.txt");
+        FileWriter fiw =new FileWriter(obj);
+        char c[]={'a','d','i'};
+        fiw.write(c);
+        fiw.close();
+    }
+    catch(Exception e)
+    {
+        System.out.println(e.getMessage());
+    }
+
+Now we will be writng using offset
+
+File obj=new File("adi1.txt");
+        FileWriter fiw =new FileWriter(obj);
+        char c[]={'a','d','i'};
+        fiw.write(c,1,2);//take from the the 1st index and take two elements
+        fiw.close();
+
+So there will be only "di" inside the txt file
+-------------------------------------------------
+If u want to append something into the file without erasing then you should
+
+ File obj=new File("adi1.txt");
+        FileWriter fiw =new FileWriter(obj,true);//this small change should be taken
+        char c[]={'a','d','i'};
+        fiw.write(c);
+        fiw.close();
+-----------------------------------------------
+FileWrite for writing the Strings
+
+ File obj=new File("adi1.txt");
+        FileWriter fiw =new FileWriter(obj);
+        String name="Yo its a string";
+        fiw.write(name);
+        fiw.close();
+---------------------------------------------
+Reading 16 bit data
+
+import java.io.*;
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args) throws IOException   {
+    try{
+        File obj=new File("adi.txt");//epsilon is there in it
+        FileInputStream fin=new FileInputStream(obj);
+        InputStreamReader iread=new InputStreamReader(fin);
+        int a=iread.read();
+        System.out.println(a);
+    }
+    catch(Exception e)
+    {
+        System.out.println(e.getMessage());
+    }
+}
+}
+If you want to write a real integer then that integer also has a seperate code in AIS table or UTF table
+-----------------------------------------------
+Writing a 16 bit data
+
+try{
+        File obj=new File("adinew.txt");
+        FileOutputStream fout=new FileOutputStream(obj);
+        OutputStreamWriter iwrite=new OutputStreamWriter(fout);
+        iwrite.write(1013);
+        fout.close();
+    }
+    catch(Exception e)
+    {
+        System.out.println(e.getMessage());
+    }
+---------------------------------------------
+OBJECT SERIALIZATION AND DESERIALIZATION
+
+import java.io.*;
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args) throws IOException   {
+    try{
+        student t=new student("Adithya",2284);
+        File obj=new File("Serialize.txt");
+        FileOutputStream iout=new FileOutputStream(obj);
+        ObjectOutputStream objout=new ObjectOutputStream(iout);
+        objout.writeObject(t);
+        objout.close();
+        File obj1=new File("Serialize.txt");
+        FileInputStream iin=new FileInputStream(obj1);
+        ObjectInputStream objin=new ObjectInputStream(iin);
+        student s=null;
+        s=(student) objin.readObject();
+        s.display();
+        objin.close();
+
+    }
+    catch(Exception e)
+    {
+        System.out.println(e.getMessage());
+    }
+
+    
+}
+}
+
+class student implements Serializable //just to tell that we are serializing nothing inside the serializable class
+{
+    String name;
+    int number;
+    public student(String name,int number)
+    {
+        this.name=name;
+        this.number=number;
+    }
+    public void display(){
+        System.out.println(name+" "+number);
+    }
+}
+Here you cant serialize static variables and 
+transient variables like(transient int k=33) K wont be serialzed / de serialized in the data
+---------------------------------------------------------------------------------------------------
+DATAOUTPUT STREAM
+
+ public static void main(String[] args) throws IOException   {
+        try{
+            File obj=new File("Adi.txt");
+            FileOutputStream fos=new FileOutputStream(obj);
+            DataOutputStream dos=new DataOutputStream(fos);
+            dos.writeInt(2);
+            dos.writeUTF("Adithya");
+            dos.writeBoolean(true);
+            fos.close();
+            dos.close();
+            FileInputStream fis=new FileInputStream(obj);
+            DataInputStream dis=new DataInputStream(fis);
+            int k=dis.readInt();
+            String a=dis.readUTF();
+            boolean b=dis.readBoolean();
+            System.out.println(k);
+            System.out.println(a);
+            System.out.println(b);
+            fis.close();
+            dis.close();
+        }
+        catch(Exception e)
+        {
+            System.out.println(e.getMessage());
+        }   
+    }
+
+This will be used for directly giving the integers/boolean/strings as input to the text file
+----------------------------------------------------------------------------------------------------
+USING SCANNER FOR READING FILES
+adithya.txt
+This is the first line 
+This is the second line
+This is the third line
+
+import java.io.*;
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args) throws FileNotFoundException   {
+    try{
+        File obj=new File("adithya.txt");
+        Scanner input=new Scanner(obj);
+        String ans=input.next();
+        System.out.println(ans);
+    }
+    catch(Exception e)
+    {
+        System.out.println(e.getMessage());
+    }    
+}
+}
+It will print you only the first word of the first line that is "This"
+---------------------------------------
+if you want every line to be printed then
+
+  File obj=new File("adithya.txt");
+        Scanner input=new Scanner(obj);
+        String ans;
+        while (input.hasNextLine()) {
+            ans=input.nextLine();//read every single line
+            System.out.println(ans);   
+        }
+------------------------------------------
+If you want to read word by word using scanner 
+
+File obj=new File("adithya.txt");
+        Scanner input=new Scanner(obj);
+        String ans;
+        while (input.hasNextLine()) {
+            ans=input.next();//read every single word
+            System.out.println(ans);   
+        }
+
+for integer digit by digit
+
+ File obj=new File("adithya.txt");
+        Scanner input=new Scanner(obj);
+        int ans;
+        while (input.hasNextLine()) {
+            ans=input.nextInt();//read every single line
+            System.out.println(ans);   
+        }
+----------------------------------------------
+BUFFERED INPUT STREAM AND OUTPUT STREAM
+
+Its used to store arrays
+
+Taking each byte
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  throws IOException  {
+      BufferedInputStream bin=new BufferedInputStream(System.in);
+      int number=bin.read(); 
+      System.out.println((char)number);//h
+      bin.close();
+    }
+}
+
+
+Taking multiple byte
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  throws IOException  {
+      BufferedInputStream bin=new BufferedInputStream(System.in);
+     byte b[]=new byte[5];
+     bin.read(b);
+     for(int i=0;i<5;i++)
+     {
+      System.out.println((char)b[i]); //hello
+
+     }
+      bin.close();
+    }
+}
+
+Mark method
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  throws IOException  {
+      BufferedInputStream bin=new BufferedInputStream(System.in);//hello
+        int number=bin.read(); //it reads the first character
+        bin.mark(3);            //it sets at e in the h|ello
+     byte b[]=new byte[5];
+     bin.read(b); //after reading you will get ello| the marker is at the end
+     bin.reset();   //Again it resets the marker where it was |ello
+     for(int i=0;i<5;i++)
+     {
+      System.out.println((char)b[i]); //it prints ello
+     }
+      bin.close();
+    }
+}
+----------------------------------------------
+BUFFERED OUTPUT STREAM
+
+BufferedInputStream bin=new BufferedInputStream(System.in);
+        int number=bin.read();
+        bin.close();
+        BufferedOutputStream bout=new BufferedOutputStream(System.out);
+        bout.write(number);//h
+        bout.close();
+if you want to write for a file then we should create a FileOutputStream and pass that file to the BufferedOutputStream
+---------------------------------------------
+
+BUFFER READER
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  throws IOException  {
+       BufferedReader br=new BufferedReader(new InputStreamReader(System.in,"UTF-16"));//ε
+       int number=br.read();
+       System.out.println((char)number);
+    }
+}
+ε WOULD BE PRINTED AND WE ARE GIVING DIRECTLY FROM THE KEYBOARD
+yoU CAN GIVE NORMAL ENGLISH ALPHABETS BY REMOVING THE "UTF-16"
+IF YOU WANT TO FIVE THE INPUT FROM THE FILE THEN YOU CAN USE FILE READER INSTEAD OF INPUT READER
+-------------------------------------------------------
+BUFFERED WRITER
+
+ BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+       int number=br.read();
+       System.out.println((char)number);
+       br.close();
+       BufferedWriter bo=new BufferedWriter(new OutputStreamWriter(System.out));
+        bo.write(number);
+------------------------------------------------------
+BUFFERED INPUT AND OUTPUT STREAM FOR FILES
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  throws IOException  {
+      File obj =new File("adithya.txt");
+      BufferedOutputStream bo=new BufferedOutputStream(new FileOutputStream(obj));
+      bo.write(104);
+      bo.close();
+      FileInputStream fi=new FileInputStream(obj);
+      BufferedInputStream bi=new BufferedInputStream(fi);
+      int number=bi.read();
+      System.out.println((char)number);
+      fi.close();
+      bi.close();
+    }
+}
+-------------------------------------------------------
+CREATING THE TWO FILES PARLLELY WITH THREADS
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  throws IOException  {
+    runfile1 r1=new runfile1("adithya1");
+    runfile2 r2=new runfile2("adithya2");
+    r1.start();
+    r2.start();
+    System.out.println(r1.getName());
+    System.out.println(r2.getName());
+}
+
+
+}
+class runfile1 extends Thread
+{
+    public runfile1(String S)
+    {
+        super(S);
+    }
+    @Override
+    public void run()
+    {
+     File obj =new File("file1.txt");
+     FileOutputStream fo;
+    try {
+    System.out.println("File1 write");
+
+        fo = new FileOutputStream(obj);
+        for(int i=1;i<=100;i++)
+     {
+        fo.write(i);
+     }
+    } catch (FileNotFoundException e) { 
+        e.printStackTrace();
+    } catch (IOException e)
+    {
+        e.printStackTrace();
+    }
+    System.out.println("File1 was created succesfully");
+    }  
+}
+class runfile2 extends Thread
+{
+    public runfile2(String S)
+    {
+        super(S);
+    }
+    @Override
+    public void run()
+    {
+        File obj1=new File("file2.txt");
+    FileOutputStream fo1;
+    try 
+    {
+    System.out.println("File2 write");
+        fo1 = new FileOutputStream(obj1);
+        for(int i=101;i<=200;i++)
+        {
+            fo1.write(i);
+        }
+    } catch (FileNotFoundException e) 
+    {
+        e.printStackTrace();
+    } catch (IOException e) 
+    {
+        e.printStackTrace();
+    }
+    System.out.println("File2 was created succesfully");
+    
+    }
+    
+}
+-------------------------------------------------------------------------------------
+THREADS USING RUNNABLE
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  throws IOException  {
+    test t = new test();
+    Thread thr=new Thread(t);
+    thr.start();
+}
+}
+class test implements Runnable {
+
+    @Override
+    public void run() {
+        System.out.println("I am inside a thread man");
+        
+    }   
+}
+Here we are creating a class just for runnable 
+--------------------------------------------------
+Threads without using runnable class(Anonymous class) AND PRIORITY TO THE THREADS
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  throws IOException  {
+    Thread thr=new Thread(new Runnable(){
+        @Override
+        public void run()
+        {
+            System.out.println("Hey I am thread 1");
+        }
+    });
+    thr.start();
+    thr.setPriority(10);  //10 is the highest priority
+    Thread thr1=new Thread(new Runnable(){
+        @Override
+        public void run()
+        {
+            System.out.println("Hey I am thread 2");
+        }
+    });
+    thr1.start();
+    thr1.setPriority(1);  //1 is the loest priority
+    System.out.println("Hey I am Main Thread");
+    System.out.println(Thread.currentThread().getName());//it gives the name of the current thread running in this case it main
+}
+}
+Our main class has default priorioty of 5
+we can use getpriority() to get the priority of a thread
+Also you can give the Thread(Runnable,String name) we can also give the name of the thread to at the same time
+------------------------------------------------------
+Join()  in Threads
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  throws IOException, InterruptedException  {
+    Thread thr=new Thread(new Runnable(){
+        @Override
+        public void run()
+        {
+            System.out.println("Hello");
+        }
+    });
+    Thread thr1=new Thread(new Runnable(){
+        @Override
+        public void run()
+        {
+            System.out.println("World");
+        }
+    });
+    thr.start();
+    thr.join(); //it ensures that next step wont start until thr dies
+    thr1.start();
+    thr1.join();//it ensures that next sted wont start until thr1 dies
+    System.out.println("Thanks for using our software");
+}
+}
+helllo
+world
+Thanks for using our software
+-----------------------------------------------------------------------------------
+BANKING ACCOUNT USING THREADS MULTI TRANSACTION
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  throws IOException, InterruptedException  {
+    account acc=new account(20000);
+    Thread thr=new Thread(new Runnable(){
+        @Override
+        public void run()
+        {
+            for (int i=0;i<50;i++)
+            {
+                acc.withdraw(100);
+            }
+        }
+    });
+    Thread thr1=new Thread(new Runnable(){
+        @Override
+        public void run()
+        {
+            for (int i=0;i<50;i++)
+            {
+                acc.withdraw(100);
+            }
+        }
+    });
+    thr.start();
+    thr1.start();
+    thr.join();
+    thr1.join();
+    System.out.println(acc.balance);
+    
+}
+}
+class account
+{
+    public int balance;
+    public account(int amount)
+    {
+        balance=amount;
+    }
+    public void withdraw(int amount)
+    {
+        balance=balance-amount;
+    }
+}
+Here there may be a chance of thread interfaring and u may get wrong answers
+------------------------------------------------------
+SYNCHRONIED(LOCK METHOD)
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  throws IOException, InterruptedException  {
+    account acc=new account(20000);
+    Thread thr=new Thread(new Runnable(){
+        @Override
+        public void run()
+        {
+            
+            
+                acc.withdraw(10000);
+            
+        }
+    });
+    Thread thr1=new Thread(new Runnable(){
+        @Override
+        public void run()
+        {
+            
+            
+                acc.depsit(5000);
+            
+        }
+    });
+    thr.start();
+    thr1.start();
+    thr.join();
+    thr1.join();
+    System.out.println(acc.balance);
+    
+}
+}
+class account
+{
+    public int balance;
+    public account(int amount)
+    {
+        balance=amount;
+    }
+    public synchronized void  withdraw(int amount)
+    {
+        System.out.println("Withdrawn succesfully");
+        balance=balance-amount;
+    }
+    public synchronized void depsit(int deposit_amount)
+    {
+        System.out.println("Deposited Successfully");
+        balance=balance+deposit_amount;
+    }
+}
+Here we have given the synchronized on the both withdraw and deposit so that says first there will be a lock on the object "acc"
+by one of the two synchronized functions from the class until and unless one thread had completed the lock wont be broked
+so one thing would happen after the other unlik the problem that we have seen
+---------------------------------------------------------------------------------------
+SLEEP() IN THREADS
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  throws IOException, InterruptedException  {
+    account acc=new account(20000);
+    Thread thr=new Thread(new Runnable(){
+        @Override
+        public void run()
+        {
+            
+        try {
+            acc.withdraw(10000);
+        } catch (InterruptedException e) { //small error mechanism for applying the 
+            e.printStackTrace();
+        }
+        }
+    });
+    Thread thr1=new Thread(new Runnable(){
+        @Override
+        public void run()
+        {
+            
+            
+                acc.depsit(5000);
+            
+        }
+    });
+    thr.start();
+    thr1.start();
+    thr.join();
+    thr1.join();
+    System.out.println(acc.balance);
+    
+}
+}
+class account
+{
+    public int balance;
+    public account(int amount)
+    {
+        balance=amount;
+    }
+    public synchronized void  withdraw(int amount) throws InterruptedException
+    {
+        System.out.println("Withdrawn succesfully");
+        Thread.currentThread().sleep(9000);  //telling the thread to not release the lock on the object for 9seconds 
+        balance=balance-amount;
+    }
+    public synchronized void depsit(int deposit_amount)
+    {
+        System.out.println("Deposited Successfully");
+        balance=balance+deposit_amount;
+    }
+}
+---------------------------------------------------------------------------------------
+IN PREVIOUS METHOS THE WHOLE OBJECT WAS LOCKED BUT IN THIS METHOD THE ONLY ONE FUNCTION WOULD BE LOCKED THATS called
+SYNCHRONIZED BLOCK
+
+public  void  withdraw(int amount) throws InterruptedException
+    {
+        synchronized(this)
+        {
+         System.out.println("Withdrawn succesfully");
+          Thread.currentThread().sleep(9000);         //only this part is synchronized instead of the whole thing
+        balance=balance-amount;
+        }
+        System.out.println("I am outside Synchronized ablock");
+    }
+-------------------------------------------------------------------
+STATIC SYNCHRONIZED BLOCK
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  throws IOException, InterruptedException  {
+    test t=new test();
+    Thread thr=new Thread(new Runnable(){
+        @Override
+        public void run()
+        {
+            try {
+                test.display1();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    });
+    Thread thr1=new Thread(new Runnable(){
+        @Override
+        public void run()
+        {
+            t.display2();
+        }
+    });
+    thr.start();
+    thr1.start();
+   
+   // System.out.println(acc.balance);
+    
+}
+}
+class test
+{
+    public static synchronized void display1() throws InterruptedException
+    {
+        System.out.println("I am from inside static block");
+        Thread.currentThread().sleep(9000);
+    }
+    public synchronized void display2()
+    {
+        System.out.println("I am not from static block");
+    }
+}
+Here both will execute simultaneously because one is static and other is non static 
+if both are static then they will excute with 9000ms difference
+------------------------------------------------------------------------------------------
+WAIT AND NOTIFY()
+
+Here we are having a balance of 2000 but we are trying to withdraw 30k but we dont have sufficcient funds so it goes into wait mode but 
+it dosent terminates when u get a high depsition  to the account it notifies notify() and triggers the wait() and again it will become active
+and it works
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  throws IOException, InterruptedException  {
+    account acc=new account(2000);
+    Thread thr=new Thread(new Runnable(){
+        @Override
+        public void run()
+        {
+            
+        try {
+            acc.withdraw(30000);
+        } catch (InterruptedException e) { //small error mechanism for applying the 
+            e.printStackTrace();
+        }
+        }
+    });
+    Thread thr1=new Thread(new Runnable(){
+        @Override
+        public void run()
+        {
+            
+            
+                acc.deposit(40000);
+            
+        }
+    });
+    thr.start();
+    thr1.start();
+    thr.join();
+    thr1.join();
+    System.out.println(acc.balance+" "+Thread.currentThread().getId());
+    
+}
+}
+class account
+{
+    public int balance;
+    public account(int amount)
+    {
+        balance=amount;
+    }
+    public synchronized void  withdraw(int amount) throws InterruptedException
+    {
+        System.out.println("Withdrawn begining");
+        while(this.balance<amount)
+        {
+            System.out.println("Its waiting");
+            wait();
+        }
+        System.out.println("Withdraw is happening"+Thread.currentThread().getId());
+        balance=balance-amount;
+    }
+    public synchronized void deposit(int deposit_amount)
+    {
+        System.out.println("Depositing happening"+Thread.currentThread().getId());
+        balance=balance+deposit_amount;
+        System.out.println("Notyfying"+Thread.currentThread().getId());
+        notify();
+    }
+}
+OUTPUT:
+
+Withdrawn begining
+Its waiting
+Depositing happening14 
+Notyfying14
+Withdraw is happening13
+12000 1
+
+NOTE:notify() can wake up one thread from wait()
+if you want to wake up all the threads then notifyAll() should be used
+BUt problem with notifyAll is that if some of them again goes to wait() due to insufficient funds then your 
+whole programme would be stopped
+
+Dead lock is a concept where two threads has two seperate locks and the 2nd thread is asking for the 1st lock and 1st thread is asking
+for the lock acquired by 2nd thread so these 2 threads go into infinite wait() stage called deadlock
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+ANOYNOMOUS CLASSES IN JAVA
+
+import java.io.*;
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args)    {
+      employee e =new employee(){
+          public void display()
+          {
+              System.out.println("I am in anoynomous class");
+          }
+      };
+      e.display();  //I am in anoynomous would be printed
+     }
+}
+abstract class employee{
+public abstract void display();
+}
+
+
+import java.io.*;
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args)    {
+      employee e =new employee(){
+          public void display()
+          {
+              System.out.println("I am inside interface");
+          }
+      };
+      e.display(); //I am inside interface would be printed
+     }
+}
+interface employee{
+public abstract void display();
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------
+LAMBDA EXPRESSIONS
+
+import java.io.*;
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args)    {
+      employee e=()->{System.out.println("I am inside lambda");};
+      e.display();//I am inside lambda would be printed
+     }
+}
+interface employee{
+public abstract void display();
+}
+
+import java.io.*;
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args)    {
+      employee e=(name,designation)->{System.out.println("I am inside lambda:"+name+" "+designation);};
+      e.display("Adithya","Student");//I am inside lambda:Adithya
+     }
+}
+interface employee{
+public abstract void display(String name,String designation);
+}
+--------------------------
+Lambda Expression with a return type
+
+import java.io.*;
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args)    {
+     employee e=(a,b)->{return a+b;};
+     System.out.println(e.add(1, 2));
+     }
+}
+interface employee{
+int add(int a,int b);
+}
+--------------------------
+Lambda expression with thread
+
+import java.io.*;
+import java.util.*;
+public class CAT
+{
+    public static void main(String[] args)    {
+    Runnable r=()->{System.out.println("I am in thread 1");};
+    Thread t=new Thread(r);
+    t.start();
+     }
+}
+
+// @FunctionalInterface
+// public interface Runnable{
+// public abstract void run();
+// }
+---------------------------
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+ INTRODUCTION TO COLLECTION , ARRAYLIST AND LINKEDLIST
+
+ARRAY LIST
+
+Adding an element in the ArrayList
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  {
+    ArrayList<String> arr=new ArrayList<>();
+    arr.add("Adithya");
+    arr.add("Bokkisum");
+    arr.add("Super Dream");
+    arr.add(2, "S/O Ravishankar"); //it will keep this string in index 2 and Super Dream would be on the index 3
+    arr.remove(1); //it removes the thing in index 1
+    arr.clear() //it removes all the thing in the array
+    System.out.println(arr.isEmpty());//throws true or false
+    System.out.println(arr.contains("Adithya"));//checks whether Adithya object is there or not and returns a boolean value
+    System.out.println(arr.indexOf("Bokkisum"));//returns the first index of the name
+    System.out.println(arr.lastIndexOf("Bokkisum"));//returns the index from the last index
+    ArrayList<String> arr1=(ArrayList<String>) arr.clone(); //shallow copying to another array
+    for(int i=0;i<arr.size();i++)
+    {
+        String k=(String)arr.get(i);
+        System.out.println(k);
+    }
+}
+}
+-------------------------------------
+TRAVERSING USING ITERATOR
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  {
+    ArrayList<String> arr=new ArrayList<>();
+    arr.add("Adithya");
+    arr.add("Bokkisum");
+    arr.add("Super Dream");
+    arr.add(2,"S/O Ravishankar");
+   Iterator itr=arr.iterator();
+    while(itr.hasNext())
+    {
+        String a=(String)itr.next();
+        System.out.println(a);
+    }
+}
+}
+-----------------------
+TRAVERSING USING LISTITERATOR
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  
+    {
+    ArrayList<String> arr=new ArrayList<>();
+    arr.add("Adithya");
+    arr.add("Bokkisum");
+    arr.add("Super Dream");
+    arr.add(2,"S/O Ravishankar");
+   ListIterator<String> itr=arr.listIterator(arr.size());
+    while(itr.hasPrevious())
+    {
+        String a=(String)itr.previous();
+        System.out.println(a);
+    }
+}
+}
+Also you can traverse forward too with ListIterator
+------------------------------
+Copying using ListIterator
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  
+    {
+    ArrayList<String> arr=new ArrayList<>();
+    arr.add("Adithya");
+    arr.add("Bokkisum");
+    arr.add("Super Dream");
+    arr.add(2,"S/O Ravishankar");
+    ArrayList<String> arr1=new ArrayList<>(arr);
+   ListIterator<String> itr=arr1.listIterator();
+    while(itr.hasNext())
+    {
+        String a=(String)itr.next();
+        System.out.println(a);
+    }
+}
+}
+--------------------------------
+TO ADD ALL THE ELEMENTS
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  
+    {
+    ArrayList<String> arr=new ArrayList<>();
+    arr.add("Adithya");
+    arr.add("Bokkisum");
+    arr.add("Super Dream");
+    arr.add(2,"S/O Ravishankar");
+    ArrayList<String> arr1=new ArrayList<>();
+    arr1.add("Test1");
+    arr1.add("Test2");
+    arr1.addAll(arr);
+    arr1.removeAll(arr);//removes all the elements from the arr that has been added to arr1
+    arr1.retainAll(arr);//it only keeps the elements of arr and removes the arr1 elements
+    NOTE:keep in mind that arr1 should not be empty to work
+   ListIterator<String> itr=arr1.listIterator();
+    while(itr.hasNext())
+    {
+        String a=(String)itr.next();
+        System.out.println(a);
+    }
+}
+}
+-------------------------------------------------------------------------------------------------------------------
+LINKED LIST
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  
+    {
+    LinkedList<String> arr=new LinkedList<>();
+    arr.add("Adithya");
+    arr.add("Bokkisum");
+    arr.add("Super Dream");
+    arr.add(2,"S/O Ravishankar");
+    arr.push("Anitha"); //it pushes on top like stack
+    arr.pop();            //it pops the top most element
+   ListIterator<String> itr=arr.listIterator();
+    while(itr.hasNext())
+    {
+        String a=(String)itr.next();
+        System.out.println(a);
+    }
+}
+}
+------------------------------------------------------
+ARRAYLIST OF OBJECTS
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  
+    {
+    ArrayList<student> arr=new ArrayList<>();
+    student a=new student("Adi", "18bce2284");
+    student b=new student("Balz", "18bce2321");
+    arr.add(a);
+    arr.add(b);
+    ListIterator<student> itr=arr.listIterator();
+    while(itr.hasNext())
+    {
+        student st=(student)itr.next();
+        System.out.println(st.name+" "+st.reg_no);
+    }
+}
+}
+class student
+{
+    String name;
+    String reg_no;
+    public student(String name,String reg_no)
+    {
+        this.name=name;
+        this.reg_no=reg_no;
+    }
+    
+}
+------------------------------------------------------------------------------------------------------------------------------------
+MAPS IN JAVA
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  
+    {
+    Map<String,String> map=new HashMap<>();
+    map.put("Scorsese", "RobertDeNiro");
+    map.put("Quentin","Samuel L Jackson");
+    map.put("Rajamouli", "JR Ntr");
+    System.out.println(map.get("Scorsese")); //this is for getting the value by the help of the key
+}
+}
+------------------------------------------------------------------
+PRINTING USING ENHANCED FORLOOP
+
+import java.io.*;
+import java.util.*;
+public class CAT 
+{
+    public static void main(String[] args)  
+    {
+    Map<String,String> map=new HashMap<>(); //Hashtable()
+    map.put("Scorsese", "RobertDeNiro");
+    map.put("Quentin","Samuel L Jackson");
+    map.put("Rajamouli", "JR Ntr");
+    map.put("Scorsese", "LeoDCarpio");
+    Set<String>keys=map.keySet();
+    for(String key:keys)
+    System.out.println(key+" "+map.get(key));
+}
+}
+It replace RobertDeNiro with leo dicarpio  because you cant have repeated keys 
+but you can have repeated values
+yo can use hastable in the place of hashmap the there wont be any difference but in Hash table its synchronized 
+----------------------------------------------------------------------------------------------------------------
+SEE ALL THE MAP RELATED THINGS FROM  KUMAR PJ
+----------------------------------------------------------------------------------------------------------------
+
+JAVA FX 
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+import java.util.*;
+
+public class App extends Application {
+    public static void main(String[] args){
+        launch();
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Button b1=new Button("CLICK ME"); ----------->ADDING A CONTROL
+        HBox root1=new HBox();            ----------->ADDING THIS BUTTON/CONTROL TO A LAYOUT
+        root1.getChildren().add(b1);
+        Scene sc=new Scene(root1);------------------->ADDING THE LAYOUT TO A SCENE
+        primaryStage.setScene(sc);-------------------->ADDING THIS SCENE TO A STAGE
+        primaryStage.show();--------------------------->SHOWING THE STAGE
+    }
+}
+------------------------
+OTHER FINCTIONS IN primaryStage
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+import java.util.*;
+
+public class App extends Application {
+    public static void main(String[] args){
+        launch();
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Button b1=new Button("CLICK ME");
+        HBox root1=new HBox();
+        root1.getChildren().add(b1);
+        Scene sc=new Scene(root1);
+        primaryStage.setScene(sc);
+        // primaryStage.setWidth(500);
+        // primaryStage.setHeight(500);
+        primaryStage.setTitle("ADITHYA_18BCE2284");
+        primaryStage.setFullScreen(true);
+        primaryStage.show();
+        primaryStage.close();--->if u use this your stage will be shown and closed very quickly
+        used for closing the primaryStage
+    }
+}
+WE CAN USE getWidth() and getHeight() for getting the values and isFullScreen() will give the boolean if the given stage is 
+full screen or not
+-------------------------------------------
+
+LAYOUT IN JFX
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+import java.util.*;
+
+public class App extends Application {
+    public static void main(String[] args){
+        launch();
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Button b1=new Button("CLICK ME");
+        Button b2=new Button("CLICK ME");
+        Button b3=new Button("CLICK ME");
+        Button b4=new Button("CLICK ME");
+        Button b5=new Button("CLICK ME");
+        Button b6=new Button("CLICK ME");
+        Button b7=new Button("CLICK ME");
+        Button b8=new Button("CLICK ME");
+        Button b9=new Button("CLICK ME");
+        Button b10=new Button("CLICK ME");
+        Button b11=new Button("CLICK ME");
+        Button b12=new Button("CLICK ME");
+        Button b13=new Button("CLICK ME");
+
+        HBox root1=new HBox();
+        root1.setSpacing(20);------------>It adds spacing to each box of value 20
+
+        root1.getChildren().add(b2);
+        root1.getChildren().add(b2);
+        root1.getChildren().add(b3);
+        root1.getChildren().add(b4);
+        root1.getChildren().add(b5);
+        root1.getChildren().add(b6);
+        root1.getChildren().add(b7);
+        root1.getChildren().add(b8);
+        root1.getChildren().add(b9);
+        root1.getChildren().add(b10);
+        root1.getChildren().add(b11);
+        root1.getChildren().add(b12);
+        root1.getChildren().add(b13);
+
+        Scene sc=new Scene(root1);
+        primaryStage.setScene(sc);
+        // primaryStage.setWidth(500);
+        // primaryStage.setHeight(500);
+        primaryStage.setTitle("ADITHYA_18BCE2284");
+        primaryStage.setFullScreen(true);
+        primaryStage.show();
+    }
+}
+If we run this thing we will be getiing 13 boxes horizontallly 
+if we change the Hbox to Vbox the total thing would be changed to vertically
+If we change to FlowPane then if you try to adjust the length the boxes will re arrange themselves
+--------------------------------------
+GRID PANE
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+import java.util.*;
+
+public class App extends Application {
+    public static void main(String[] args){
+        launch();
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Button b1=new Button("CLICK ME");
+        Button b2=new Button("CLICK ME");
+        Button b3=new Button("CLICK ME");
+        
+
+        GridPane root1=new GridPane();
+        
+        //keeping the buttons in those coordinates(x,y)
+        root1.add(b1, 0, 0);
+        root1.add(b2, 1, 1);
+        root1.add(b3, 2, 2);
+        //we can see the GridPane
+        root1.setGridLinesVisible(true);
+        //we are keeping a gap for each and every bt1,2,3
+        root1.setVgap(20);
+        root1.setHgap(20);
+        
+
+        
+
+        Scene sc=new Scene(root1);
+        primaryStage.setScene(sc);
+        primaryStage.setWidth(500);
+        primaryStage.setHeight(500);
+        primaryStage.setTitle("ADITHYA_18BCE2284");
+        //primaryStage.setFullScreen(true);
+        primaryStage.show();
+    }
+}
+---------------------------------------
+BORDER PANE
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+import java.util.*;
+
+public class App extends Application {
+    public static void main(String[] args){
+        launch();
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Button b1=new Button("CLICK ME");
+        Button b2=new Button("CLICK ME");
+        Button b3=new Button("CLICK ME");
+        
+
+        BorderPane root1=new BorderPane();
+        
+        root1.setBottom(b1);---------->leftside bottom buttom would come
+        root1.setCenter(b2);
+
+        Scene sc=new Scene(root1);
+        primaryStage.setScene(sc);
+        primaryStage.setWidth(500);
+        primaryStage.setHeight(500);
+        primaryStage.setTitle("ADITHYA_18BCE2284");
+        //primaryStage.setFullScreen(true);
+        primaryStage.show();
+    }
+}
+---------------------------------------------------------------------------------------------------------------------
+JavaFX UI Control - Label , Button, RadioButton, CheckBox, Hyperlink, ComboBox, ListView, TextField
+
+LABEL 
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.TextAlignment;
+import javafx.stage.Stage;
+import java.util.*;
+
+public class App extends Application {
+    public static void main(String[] args){
+        launch();
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+       Label l1=new Label("Please enter your name");
+       l1.setText("I am the new one here here does an one has baalls to stop");--->using this you can modify the prev written text
+       l1.setWrapText(true);------------------->it would wrap up the text if the wondow is shrinked/expanded
+       l1.setTextFill(Color.RED);
+        l1.setFont(new Font("Times New ROman",32));
+        l1.setTextAlignment(TextAlignment.JUSTIFY);---->justify would write like normal paagraph,CENTER and RIGHT and LEFT would 
+                                                        chamge the text alignment
+       HBox root=new HBox();
+       root.getChildren().add(l1);
+        Scene sc=new Scene(root);
+        primaryStage.setScene(sc);
+        primaryStage.setWidth(500);
+        primaryStage.setHeight(500);
+        primaryStage.show();
+    }
+}
+--------------------------------------------
+LABEL-ADING IMAGES
+
+public void start(Stage primaryStage) throws Exception {
+        FileInputStream f1=new FileInputStream("Capture.jpg");
+        Image img=new Image(f1);
+        ImageView iv=new ImageView(img);
+       Label l1=new Label("Please enter your name",iv);
+       l1.setText("I am the new one here here does an one has baalls to stop");
+       l1.setWrapText(true);
+       l1.setTextFill(Color.RED);
+        l1.setFont(new Font("Times New ROman",32));
+        l1.setTextAlignment(TextAlignment.JUSTIFY);
+--------------------------------------------------------------------------------------------
+BUTTONS
+
+import java.io.FileInputStream;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.TextAlignment;
+import javafx.stage.Stage;
+import java.util.*;
+public class App extends Application {
+    public static void main(String[] args){
+        launch();
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        FileInputStream fi=new FileInputStream("Capture.jpg");
+        Image img=new Image(fi);
+        ImageView iv=new ImageView(img);
+       Button b1=new Button("click here",iv);  //adiing the image on the button
+       b1.setText("I am setting my own rules");
+       b1.setWrapText(true);
+       //b1.setDisable(true);
+       HBox root1=new HBox(b1);
+       Scene sc=new Scene(root1);
+       primaryStage.setScene(sc);
+       primaryStage.setHeight(500);
+       primaryStage.setWidth(500);
+       primaryStage.show();
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------
+RADIO BUTTON
+
+import java.io.FileInputStream;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.TextAlignment;
+import javafx.stage.Stage;
+import java.util.*;
+public class App extends Application {
+    public static void main(String[] args){
+        launch();
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        
+       ToggleGroup t1=new ToggleGroup();
+       RadioButton r1=new RadioButton("Martin Scorsese");
+       RadioButton r2=new RadioButton("Christopher Nolan");
+       RadioButton r3=new RadioButton("Quentin");
+       RadioButton r4=new RadioButton("Coen");
+       r1.setToggleGroup(t1);
+       r2.setToggleGroup(t1);
+       r3.setToggleGroup(t1);
+       r4.setToggleGroup(t1);
+
+
+       VBox root1=new VBox();
+       root1.getChildren().addAll(r1,r2,r3,r4);
+       Scene sc=new Scene(root1);
+       primaryStage.setScene(sc);
+       primaryStage.setHeight(500);
+       primaryStage.setWidth(500);
+       primaryStage.show();
+    }
+}
+--------------------------------------------------
+CHECK BOX
+
+import java.io.FileInputStream;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.TextAlignment;
+import javafx.stage.Stage;
+import java.util.*;
+public class App extends Application {
+    public static void main(String[] args){
+        launch();
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        
+       CheckBox r1=new CheckBox("Martin Scorsese");
+       CheckBox r2=new CheckBox("QUENTIN");
+       CheckBox r3=new CheckBox("NOLAN");
+       CheckBox r4=new CheckBox("PTA");
+       
+
+
+       VBox root1=new VBox();
+       root1.getChildren().addAll(r1,r2,r3,r4);
+       Scene sc=new Scene(root1);
+       primaryStage.setScene(sc);
+       primaryStage.setHeight(500);
+       primaryStage.setWidth(500);
+       primaryStage.show();
+    }
+}
+--------------------------------------------------------------
+HYPERLINK
+
+public class App extends Application {
+    public static void main(String[] args){
+        launch();
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        
+       Hyperlink h1=new Hyperlink("https://www.youtube.com/");
+       VBox root1=new VBox(h1);
+       Scene sc=new Scene(root1);
+       primaryStage.setScene(sc);
+       primaryStage.setHeight(500);
+       primaryStage.setWidth(500);
+       primaryStage.show();
+       
+    }
+}
+-------------------------------------------------------------
+COMBO BOX(DROP DOWN MENU)
+
+@Override
+    public void start(Stage primaryStage) throws Exception {
+        
+       ComboBox <String> subjects=new ComboBox<String>();
+       subjects.getItems().add("English");
+       subjects.getItems().add("Maths");
+       subjects.getItems().add("Social");
+       subjects.getItems().add("Science");
+       HBox root1=new HBox(subjects);
+       Scene sc=new Scene(root1);
+       primaryStage.setScene(sc);
+       primaryStage.setHeight(500);
+       primaryStage.setWidth(500);
+       primaryStage.show();
+
+    }
+}
+------------------------------------------------------------
+LISTVIEW
+
+public void start(Stage primaryStage) throws Exception {
+        
+       ListView<String> L=new ListView<String>();
+       L.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+       L.getItems().addAll("Maths","Science","Hindi","Tamil");
+       HBox root1=new HBox(L);
+       Scene sc=new Scene(root1);
+       primaryStage.setScene(sc);
+       primaryStage.setHeight(500);
+       primaryStage.setWidth(500);
+       primaryStage.show();
+
+    }
+----------------------------------------------------------
+TEXTFIELD
+
+public void start(Stage primaryStage) throws Exception {
+        
+       TextField t=new TextField();
+       PasswordField p=new PasswordField();
+
+       HBox root1=new HBox();
+       root1.getChildren().addAll(t,p);
+       Scene sc=new Scene(root1);
+       primaryStage.setScene(sc);
+       primaryStage.setHeight(500);
+       primaryStage.setWidth(500);
+       primaryStage.show();
+
+    }
+-------------------------------------------------------
+TEXTBOX AND PASSWORD FIELD
+
+public void start(Stage primaryStage) throws Exception {
+        
+       TextField t=new TextField();
+       t.maxWidth(500);
+       PasswordField p=new PasswordField();
+        p.maxWidth(500);
+       VBox root1=new VBox();
+       root1.getChildren().addAll(t,p);
+       Scene sc=new Scene(root1);
+       primaryStage.setScene(sc);
+       primaryStage.setHeight(500);
+       primaryStage.setWidth(500);
+       primaryStage.show();
+
+    }
+----------------------------------------------------------------------------------------------------------------------------
+
+MENUS IN JavaFX
+
+
+import javax.swing.text.View;
+public class App extends Application {
+    public static void main(String[] args){
+        launch();
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        
+        //main menu bar
+       MenuBar main_menu=new MenuBar();
+       Menu File=new Menu("File");
+       Menu Edit=new Menu("Edit");
+       Menu Selection=new Menu("Selection");
+       Menu View=new Menu("View");
+       Menu Go=new Menu("Go");
+       Menu Run=new Menu("Run");
+       Menu Terminal=new Menu("Terminal");
+       Menu Help=new Menu("Help");
+
+        main_menu.getMenus().addAll(File,Edit,Selection,View,Go,Run,Terminal,Help);
+
+        //sub menu(Menu item)
+        MenuItem new_file=new MenuItem("New File");
+        MenuItem new_window=new MenuItem("New Window");
+        MenuItem open_file=new MenuItem("Open File");
+        MenuItem open_window=new MenuItem("Open Window");
+        
+
+
+    File.getItems().addAll(new_file,new_window,open_file,open_window);
+       BorderPane root1=new BorderPane();
+       root1.setTop(main_menu);
+       Scene sc=new Scene(root1);
+       primaryStage.setScene(sc);
+       primaryStage.setHeight(500);
+       primaryStage.setWidth(500);
+       primaryStage.show();
+
+    }
+}
+---------------------------------------------------
+//lets create a sub sub menu for new_file(sub menu in terms of satish cj)
+just change the MenuItem to Menu and treat it as normal menu and add MenuItems to it 
+
+public void start(Stage primaryStage) throws Exception {
+        
+       MenuBar main_menu=new MenuBar();
+       Menu File=new Menu("File");
+       Menu Edit=new Menu("Edit");
+       Menu Selection=new Menu("Selection");
+       Menu View=new Menu("View");
+       Menu Go=new Menu("Go");
+       Menu Run=new Menu("Run");
+       Menu Terminal=new Menu("Terminal");
+       Menu Help=new Menu("Help");
+
+        main_menu.getMenus().addAll(File,Edit,Selection,View,Go,Run,Terminal,Help);
+
+        Menu new_file=new Menu("New File");
+        MenuItem new_window=new MenuItem("New Window");
+        MenuItem open_file=new MenuItem("Open File");
+        MenuItem open_window=new MenuItem("Open Window");
+
+        MenuItem new_project=new MenuItem("New Project");
+        MenuItem new_idea=new MenuItem("New Idea");
+        MenuItem new_logic=new MenuItem("New Logic");
+
+        new_file.getItems().addAll(new_project,new_idea,new_logic);
+        
+
+        File.getItems().addAll(new_file,new_window,open_file,open_window);
+       BorderPane root1=new BorderPane();
+       root1.setTop(main_menu);
+       Scene sc=new Scene(root1);
+       primaryStage.setScene(sc);
+       primaryStage.setHeight(500);
+       primaryStage.setWidth(500);
+       primaryStage.show();
+
+    }
+}
+-------------------------------------------------------------------------------
+DATE PICKER OBJECT IN JFX
+
+public void start(Stage primaryStage) throws Exception {
+        
+       Label l1=new Label("Please write your birthday");
+       DatePicker d=new DatePicker();
+       HBox root=new HBox();
+        root.getChildren().addAll(l1,d);
+        Scene sc=new Scene(root);
+        primaryStage.setWidth(500);
+        primaryStage.setHeight(500);
+        primaryStage.setScene(sc);
+        primaryStage.show();
+
+    }
+------------------------------------------------------------------------------------------------------------
+
+JAVA EVENT HANDLERS
+
+Basic Even handler where you get a message after your Input
+
+public void start(Stage primaryStage) throws Exception {
+        
+       Label l1=new Label();
+       Button b1=new Button("Click Me");
+       b1.setOnAction(new EventHandler<ActionEvent>(){
+
+        @Override
+        public void handle(ActionEvent event) {
+            l1.setText("Yo What's Up");
+        }
+           
+       });
+       HBox root =new HBox();
+       root.getChildren().addAll(b1,l1);
+       Scene sc=new Scene(root);
+       primaryStage.setWidth(500);
+       primaryStage.setHeight(500);
+       primaryStage.setScene(sc);
+       primaryStage.show();
+
+    }
+------------------------------------------------------------------------
+
+GETTING INPUT FROM THE TEXT 
+
+ public void start(Stage primaryStage) throws Exception {
+        
+       TextField t=new TextField();
+       t.setMaxWidth(300);
+       Button b1=new Button("SUBMIT");
+       Label l1=new Label();
+       b1.setOnAction(new EventHandler<ActionEvent>(){
+
+        @Override
+        public void handle(ActionEvent arg0) {
+            
+            l1.setText("Welcome Mr."+t.getText());//WELCOME MR.ADITHYA WOULD BE PRINTED
+            l1.setTextFill(Color.RED);
+            l1.setFont(new Font("Times New Roman",32));
+        }
+           
+       });
+       VBox root =new VBox();
+       root.getChildren().addAll(t,b1,l1);
+       Scene sc=new Scene(root);
+       primaryStage.setWidth(500);
+       primaryStage.setHeight(500);
+       primaryStage.setScene(sc);
+       primaryStage.show();
+
+    }
+}
+-----------------------------------------------------------
+GETTING INPUT FROM RADIO BUTTON
+
+ public void start(Stage primaryStage) throws Exception {
+        
+       ToggleGroup t1=new ToggleGroup();
+       RadioButton r1=new RadioButton("Martin Scorsese");
+       RadioButton r2=new RadioButton("Christopher Nolan");
+       RadioButton r3=new RadioButton("Quentin");
+       RadioButton r4=new RadioButton("Coen");
+       Button b1=new Button("SUBMIT");
+       r1.setToggleGroup(t1);
+       r2.setToggleGroup(t1);
+       r3.setToggleGroup(t1);
+       r4.setToggleGroup(t1);
+       Label l1=new Label();
+
+       b1.setOnAction(new EventHandler<ActionEvent>(){
+
+        @Override
+        public void handle(ActionEvent event) {
+            if(r1.isSelected())
+            {
+                l1.setText("You have selected the greatest Living Director:"+r1.getText());
+            }
+            else{
+                l1.setText("Sorry he is not the greatest");
+            }
+            
+        }
+           
+       });
+
+       VBox root1=new VBox();
+       root1.getChildren().addAll(r1,r2,r3,r4,b1,l1);
+       Scene sc=new Scene(root1);
+       primaryStage.setScene(sc);
+       primaryStage.setHeight(500);
+       primaryStage.setWidth(500);
+       primaryStage.show();
+    }
+}
+-----------------------------------------------
+
+GETTING INPUT FROM THE CHECK BOX
+
+public void start(Stage primaryStage) throws Exception {
+        
+      
+       CheckBox r1=new CheckBox("Martin Scorsese");
+       CheckBox r2=new CheckBox("QUENTIN");
+       CheckBox r3=new CheckBox("NOLAN");
+       CheckBox r4=new CheckBox("PTA");
+       Button b1=new Button("SUBMIT");
+       Label l1=new Label();
+
+       b1.setOnAction(new EventHandler<ActionEvent>(){
+
+        @Override
+        public void handle(ActionEvent arg0) {
+            String my_final="";
+            if(r1.isSelected())
+            {
+                my_final+=r1.getText();
+                my_final+=" ";
+            }
+            if(r2.isSelected())
+            {
+                my_final+=r2.getText();
+                my_final+=" ";
+            }
+            if(r3.isSelected())
+            {
+                my_final+=r3.getText();
+                my_final+=" ";
+            }
+            if(r4.isSelected())
+            {
+                my_final+=r4.getText();
+                my_final+=" ";
+            }
+             if(my_final.isEmpty())
+            {
+                l1.setText("Nothing has been selected ");
+            }
+            else{
+                
+            l1.setText(my_final);
+
+            }
+            
+        }
+           
+       });
+       
+
+
+       VBox root1=new VBox();
+       root1.getChildren().addAll(r1,r2,r3,r4,b1,l1);
+       Scene sc=new Scene(root1);
+       primaryStage.setScene(sc);
+       primaryStage.setHeight(500);
+       primaryStage.setWidth(500);
+       primaryStage.show();
+    }
+}
+---------------------------------------------------------------------------------
+GETTING INPUT FROM THE COMBO BOX(Drop Down Menu)
+
+public void start(Stage primaryStage) throws Exception {
+        
+        ComboBox <String> subjects=new ComboBox<String>();
+        subjects.getItems().add("English");
+        subjects.getItems().add("Maths");
+        subjects.getItems().add("Social");
+        subjects.getItems().add("Science");
+        Button b1=new Button("Submit");
+        Label l1=new Label();
+        b1.setOnAction(new EventHandler<ActionEvent>(){
+
+            @Override
+             public void handle(ActionEvent arg0) {
+                if(subjects.getValue()==null)
+                {
+                    l1.setText("Please select a value");
+                }
+                else{
+                l1.setText("Selected Subject is:"+subjects.getValue());
+
+                }
+            }
+            
+        });
+        HBox root1=new HBox(subjects,b1,l1);
+        Scene sc=new Scene(root1);
+        primaryStage.setScene(sc);
+        primaryStage.setHeight(500);
+        primaryStage.setWidth(500);
+        primaryStage.show();
+}
+---------------------------------------------------------------------------------
+THIS IS A DEMO FOR ON MOUSE CLICK EVENT
+
+Label l1=new Label("Click The Mouse Here");
+       Label l2=new Label();
+       l1.setOnMouseClicked(new EventHandler<Event>(){
+
+        @Override
+        public void handle(Event arg0) {
+            l2.setText("Yes you have been clicked");
+       l2.setTextFill(Color.RED);
+
+            
+        }
+           
+       });
+       BorderPane root =new BorderPane();
+       root.setCenter(l1);
+       root.setTop(l2);
+       Scene sc=new Scene(root);
+       primaryStage.setWidth(500);
+       primaryStage.setHeight(500);
+       primaryStage.setScene(sc);
+       primaryStage.show();
+-----------------------------------------------------------------------------------------------------------------------------------
+JDBC
+
+INSERTING
+
+import java.sql.*;
+public class App  {
+    public static void main(String[] args) {
+        try{
+            Connection con=null;
+            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3307/vit","root", "");
+            System.out.println("Connection is Successfull");
+            Statement stmt=con.createStatement();
+            stmt.executeUpdate("INSERT INTO STUDENT VALUES('ANITHA','GOVINDA','INDIA',97);");
+            System.out.println("DATABASE UPDATED");
+            con.close();
+        }
+        catch(SQLException | InstantiationException | IllegalAccessException | ClassNotFoundException e){
+            System.out.println(e.getMessage());
+        }
+    }
+}
+----------------------------------------------
+
+UPDATING
+
+import java.sql.*;
+public class App  {
+    public static void main(String[] args) {
+        try{
+            Connection con=null;
+            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3307/vit","root", "");
+            System.out.println("Connection is Successfull");
+            Statement stmt=con.createStatement();
+            stmt.executeUpdate("UPDATE STUDENT SET PASSWORD='TEST' WHERE NAME='ADITHYA';");
+            System.out.println("DATABASE UPDATED");
+            con.close();
+        }
+        catch(SQLException | InstantiationException | IllegalAccessException | ClassNotFoundException e){
+            System.out.println(e.getMessage());
+        }
+    }
+}
+------------------------------------------------
+
+DELETING
+
+import java.sql.*;
+public class App  {
+    public static void main(String[] args) {
+        try{
+            Connection con=null;
+            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3307/vit","root", "");
+            System.out.println("Connection is Successfull");
+            Statement stmt=con.createStatement();
+            stmt.executeUpdate("DELETE FROM STUDENT WHERE NAME='ADITHYA';");
+            System.out.println("DATABASE UPDATED");
+            con.close();
+        }
+        catch(SQLException | InstantiationException | IllegalAccessException | ClassNotFoundException e){
+            System.out.println(e.getMessage());
+        }
+    }
+}
+
+DELTING DATABASES CANT BE POSSIBLE
+----------------------------------------------
+
+FETCHING DATA WITH JDBC
+
+import java.sql.*;
+public class App  {
+    public static void main(String[] args) {
+        try{
+            Connection con=null;
+            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3307/vit","root", "");
+            System.out.println("Connection is Successfull");
+            Statement stmt=con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_UPDATABLE); //for ResultSet to scroll
+            ResultSet set=stmt.executeQuery("SELECT * FROM STUDENT;");              up and down
+            System.out.println("STUDENT TABLE");
+            if(set.next()==false)
+            {
+                System.out.println("No records on the table");
+            }
+            
+            else{
+                set.previous(); //moving the ResultSet to previous state because it moved to the next state in the if() statement
+                while(set.next()==true)
+                {
+                    System.out.println(set.getString(1)+" "+set.getString(2)+" "+set.getString(3)+" "+set.getInt(4));
+                }
+            }
+           
+            stmt.close();
+            con.close();
+        }
+        catch(SQLException | InstantiationException | IllegalAccessException | ClassNotFoundException e){
+            System.out.println(e.getMessage());
+        }
+    }
+}
+
+ResultSet set=stmt.executeQuery("SELECT * FROM STUDENT WHERE NAME='RAVISHANKAR';");
+FOR A SPECIFIC QUERY
+-------------------------------------------------------------------------------
+
+INSERTING WITH THE HELP OF USER
+
+import java.sql.*;
+import java.util.*;
+public class App  {
+    public static void main(String[] args) {
+        try{
+            Connection con=null;
+            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3307/vit","root", "");
+            System.out.println("Connection is Successfull");
+            Scanner input=new Scanner(System.in);
+            System.out.println("Please Enter the name");
+            String name,password,country;
+            int mark;
+            name=input.nextLine();
+            password=input.nextLine();
+            country=input.nextLine();
+            mark=input.nextInt();
+            String sql="INSERT INTO STUDENT VALUES(?,?,?,?)";
+            PreparedStatement stmt=con.prepareStatement(sql); //we can directly write the above strings in '?' without prepareStatement
+            stmt.setString(1, name);                                but it will lead to sql injection attacks
+            stmt.setString(2, password);   //mapping the '?' symbols
+            stmt.setString(3, country);
+            stmt.setInt(4, mark);
+            stmt.execute();         //executed
+            stmt.close();
+            con.close();
+        }
+        catch(SQLException | InstantiationException | IllegalAccessException | ClassNotFoundException e){
+            System.out.println(e.getMessage());
+        }
+    }
+}
+-----------------------------------------------------
+
+INSERING USING USER INPUT 
+
+import java.sql.*;
+import java.util.*;
+public class App  
+{
+    public static void main(String[] args) throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException {
+        try {
+            student s=new student();
+        s.getderails();
+        s.insert_student();
+        } catch (Exception e) {
+            e.getMessage();
+        }
+    }
+}
+
+class student  {
+    private String name;
+    private String password;
+    private String country;
+    private int marks;
+    public void getderails()
+    {
+        Scanner input=new Scanner(System.in);
+
+        System.out.println("Please Enter the details like:name,password,country,mark");
+        
+            name=input.nextLine();
+            password=input.nextLine();
+            country=input.nextLine();
+            marks=input.nextInt();
+    }   
+    public void insert_student() throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException
+    {
+            dbms dbms_connection=new dbms("jdbc:mysql://localhost:3307/vit","root", "");
+            Connection con=dbms_connection.getcConnection();
+            String sql="INSERT INTO STUDENT VALUES(?,?,?,?)";
+            PreparedStatement stmt=con.prepareStatement(sql);
+            stmt.setString(1, name);
+            stmt.setString(2, password);
+            stmt.setString(3, country);
+            stmt.setInt(4, marks);
+            stmt.execute();
+            System.out.println("Record Inserted Successfully");
+            dbms_connection.CloseConnection(con, stmt);
+    }
+
+
+
+}
+class dbms{
+    private String URL;
+    private String username;
+    private String password;
+    public dbms (String URL,String username,String password) {
+        this.URL=URL;
+        this.username=username;
+        this.password=password;
+    }
+    public Connection getcConnection() throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException
+    {
+            Connection con=null;
+            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+            con=DriverManager.getConnection(URL,username, password);
+            System.out.println("Connection is Successfull");
+            return con;
+        
+    }
+    public void CloseConnection(Connection con,PreparedStatement stmt) throws SQLException
+    {
+        con.close();
+        stmt.close();
+        System.out.println("Connection is Closed");
+    }
+
+}
+--------------------------------------------------------------
+
+WHOLE CREATING,SELECTING,DELETING,UPDATING USING USER GIVEN VALUES
+
+import java.sql.*;
+import java.util.*;
+public class App  
+{
+    public static void main(String[] args) throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException {
+       
+        try {
+            student s=new student();
+            Scanner input=new Scanner(System.in);
+            int choice;
+            while(true)
+            {
+            System.out.println("Please Select an option\n 1.INSERING A QUERY\n2.UPDATING PASSWORD\n3.DELETING A RECORD\n4.SEARCH FOR A USER\n5.BREAKING OUT");
+            choice=input.nextInt();
+            switch (choice) {
+                case 1:
+            s.getderails();
+            s.insert_student();     
+            break;
+                case 2:
+            s.update_student();
+                break;
+                case 3:
+                s.delete_student_record();
+                break;
+                case 4:
+                s.search_student_record();
+                break;
+                case 5:
+                System.out.println("EXITING THE APPLICATION");
+                break;
+                default:
+                System.out.println("Please Select an Apprpriate option");
+                break;
+            }
+            if(choice==5)
+            {
+                break;
+            }
+            }
+            } catch (Exception e) {
+                e.getMessage();
+            }
+            finally{
+            System.out.println("THANKS FOR USING OUR SOFTWARE");
+            }
+    
+    
+}
+}
+
+class student  {
+    private String name;
+    private String password;
+    private String country;
+    private int marks;
+    public void getderails()
+    {
+        Scanner input=new Scanner(System.in);
+
+        System.out.println("Please Enter the details like:name,password,country,mark");
+        
+            name=input.nextLine();
+            password=input.nextLine();
+            country=input.nextLine();
+            marks=input.nextInt();
+    }   
+    public void insert_student() throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException
+    {
+            dbms dbms_connection=new dbms("jdbc:mysql://localhost:3307/vit","root", "");
+            Connection con=dbms_connection.getcConnection();
+            String sql="INSERT INTO STUDENT VALUES(?,?,?,?)";
+            PreparedStatement stmt=con.prepareStatement(sql);
+            stmt.setString(1, name);
+            stmt.setString(2, password);
+            stmt.setString(3, country);
+            stmt.setInt(4, marks);
+            stmt.execute();
+            System.out.println("Record Inserted Successfully");
+            dbms_connection.CloseConnection(con, stmt);
+    }
+    public void update_student() throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException{
+        dbms dbms_connection=new dbms("jdbc:mysql://localhost:3307/vit","root", "");
+            Connection con=dbms_connection.getcConnection();
+            System.out.println("Please enter the USERNAME of the student");
+            Scanner input=new Scanner(System.in);
+            String username,password;
+            username=input.nextLine();
+            System.out.println("Please enter the PASSWORD of the student");
+
+            password=input.nextLine();
+
+            String sql="UPDATE STUDENT SET PASSWORD=? WHERE NAME=?;";
+            PreparedStatement stmt=con.prepareStatement(sql);
+            stmt.setString(1, password);
+            stmt.setString(2, username);
+            int i=stmt.executeUpdate();
+            if(i>0)
+            {
+                System.out.println("Password Has Been Updated");
+            }
+            else{
+                System.out.println("Sorry No Record Found By the Name of:"+username);
+            }
+            dbms_connection.CloseConnection(con, stmt);
+    }
+    public void delete_student_record() throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException
+    {
+        try {
+            dbms dbms_connection=new dbms("jdbc:mysql://localhost:3307/vit","root", "");
+            Connection con=dbms_connection.getcConnection();
+            System.out.println("Please enter the USERNAME of the student to be DELETED");
+            Scanner input=new Scanner(System.in);
+            String username=input.nextLine();
+            String sql="DELETE FROM STUDENT WHERE NAME=?;";
+            PreparedStatement stmt=con.prepareStatement(sql);
+            stmt.setString(1, username);
+            int i=stmt.executeUpdate();
+            if(i>0)
+            {
+                System.out.println("RECORD HAS BEEN DELETED");
+            }
+            else{
+                System.out.println("Sorry No Record Found By the Name of:"+username);
+            }
+            dbms_connection.CloseConnection(con, stmt);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    public void search_student_record()
+    {
+        try {
+            dbms dbms_connection=new dbms("jdbc:mysql://localhost:3307/vit","root", "");
+            Connection con=dbms_connection.getcConnection();
+            System.out.println("Please enter the USERNAME of the student to be DELETED");
+            Scanner input=new Scanner(System.in);
+            String username=input.nextLine();
+            String sql="SELECT * FROM STUDENT WHERE NAME=?;";
+            PreparedStatement stmt=con.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_UPDATABLE);
+            stmt.setString(1, username);
+           ResultSet rs= stmt.executeQuery();
+
+            if(rs.next()==false)
+            {
+                System.out.println("Sorry No Record Found By the Name of:"+username);
+
+            }
+            else{
+                rs.previous();
+                System.out.println("RECORD HAS BEEN SELECTED");
+                while(rs.next())
+                {
+                    System.out.println(rs.getString(1)+" "+rs.getString(2)+" "+rs.getString(3)+" "+rs.getString(4));
+                }
+            }
+            dbms_connection.CloseConnection(con, stmt);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+class dbms{
+    private String URL;
+    private String username;
+    private String password;
+    public dbms (String URL,String username,String password) {
+        this.URL=URL;
+        this.username=username;
+        this.password=password;
+    }
+    public Connection getcConnection() throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException
+    {
+            Connection con=null;
+            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+            con=DriverManager.getConnection(URL,username, password);
+            System.out.println("Connection is Successfull");
+            return con;
+        
+    }
+    public void CloseConnection(Connection con,PreparedStatement stmt) throws SQLException
+    {
+        con.close();
+        stmt.close();
+        System.out.println("Connection is Closed");
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------
+BASIC JAVA SERVLETS BY
+
+MAKING A HTML FORM
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>WELOCOME TO OUR LOGIN PAGE</title>
+</head>
+<form action="login" method="post">
+<label for="usernamelbl">Please Enter The username</label>
+<input type="text" name="username" required><br>
+<label for="passwordlbl">Plese Enter your Password</label>
+<input type="password" name="password" required><br>
+<input type="submit" name="submit" value="submit">
+<input type="reset">
+</form>
+<body>
+</body>
+</html>
+---------------------------------------
+MAKING A BASIC BACKEND
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.swing.text.html.HTML;
+import java.sql.*;
+
+/**
+ * Servlet implementation class servlet
+ */
+@WebServlet("/servlet")
+public class servlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    /**
+     * Default constructor. 
+     */
+    public servlet() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see Servlet#init(ServletConfig)
+	 */
+	public void init(ServletConfig config) throws ServletException {
+		// TODO Auto-generated method stub
+	}
+
+	/**
+	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String method=request.getMethod();
+        if(method=="GET")
+        {
+            doGet(request, response);
+        }
+        else if(method=="POST")
+        {
+            doPost(request, response);
+        }
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.setContentType("text/html");
+        PrintWriter out=response.getWriter();
+        String username=request.getParameter("username");
+        String password=request.getParameter("password");
+        if(username.equals("adithya")&& password.equals("abc123"))
+        {
+            out.println("welcome Mr "+username+"and you have password:"+password);
+        }
+        else{
+out.println("You are a Hacker.. run you asshole");
+        }
+	}
+
+}
+
+----------------------------------------------
+
+MAKING A XML SO THAT IT CONNECT BOTH FRONT AND BACKEND
+
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>firstservlet</servlet-name>
+    <servlet-class>servelet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>firstservlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+</web-app>
+--------------------------------------------------------------------------------------------------------
+MIXING THE SERVLET AND JDBC AND CHECKING IF USERNAME,PASSWORD ARE MATCHING OR NOT
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.swing.text.html.HTML;
+import java.sql.*;
+
+/**
+ * Servlet implementation class servlet
+ */
+@WebServlet("/servlet")
+public class servlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    /**
+     * Default constructor. 
+     */
+    public servlet() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see Servlet#init(ServletConfig)
+	 */
+	public void init(ServletConfig config) throws ServletException {
+		// TODO Auto-generated method stub
+	}
+
+	/**
+	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String method=request.getMethod();
+        if(method=="GET")
+        {
+            doGet(request, response);
+        }
+        else if(method=="POST")
+        {
+            doPost(request, response);
+        }
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.setContentType("text/html");
+        PrintWriter out=response.getWriter();
+        String username=request.getParameter("username");
+        String password=request.getParameter("password");
+       try {
+		   student s=new student("ADITHYA","ABC123");
+		   boolean b=s.validate_student();
+		   if(b)
+		   {
+			   out.println("Welcome Mr."+username);
+		   }
+		   else{
+			   out.println("Please recheck your username and password");
+		   }
+	   } catch (Exception e) {
+		   System.out.println(e.getMessage());
+	   }
+	}
+
+}
+class student{
+	String username;
+	String password;
+	public void student(String username,String password)
+	{
+		this.username=username;
+		this.password=password;
+	}
+	public boolean validate_student()
+	{
+		dbms connect=null;
+		PreparedStatement stmt=null;
+		Connection con=null;
+		Boolean found=false;
+		try {
+			connect=new dbms("jdbc:mysql://localhost:3307/vit","root", "");
+			con=connect.getConnection();
+			String sql="select * from student where name=? and password=?;";
+			stmt=con.prepareStatement(sql);
+			stmt.setString(1, username);
+			stmt.setString(2, password);
+			ResultSet rs=stmt.executeQuery();
+			if(rs.next()==false)
+			{
+				found=false;
+			}
+			else{
+				found= true;
+			}
+
+
+		} catch (Exception e) {
+			//TODO: handle exception
+			System.out.println(e.getMessage());
+		}
+		finally{
+			connect.CloseConnection(con, stmt);
+		}
+		return found;
+		
+	}
+}
+class dbms{
+    private String URL;
+    private String username;
+    private String password;
+    public dbms (String URL,String username,String password) {
+        this.URL=URL;
+        this.username=username;
+        this.password=password;
+    }
+    public Connection getConnection() throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException
+    {
+            Connection con=null;
+            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+            con=DriverManager.getConnection(URL,username, password);
+            System.out.println("Connection is Successfull");
+            return con;
+        
+    }
+    public void CloseConnection(Connection con,PreparedStatement stmt) throws SQLException
+    {
+        con.close();
+        stmt.close();
+        System.out.println("Connection is Closed");
+    }
+
+}
+---------------------------------------------------------------------------------
+BASIC JSP
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>WELOCOME TO OUR LOGIN PAGE</title>
+</head>
+<form action="mylogin.jsp" method="post">
+<label for="usernamelbl">Please Enter The username</label>
+<input type="text" name="username" required><br>
+<input type="submit" name="submit" value="submit">
+<input type="reset">
+</form>
+<%
+String sub=submit.getParameter("submit");
+if(sub!=null)
+{
+    String username=request.getParameter("username");
+    out.println("Welcome "+username);
+}
+%>
+<body>
+</body>
+</html>
+
+If you run it it says Welcome adithya according to the value given to the text box
+---------------------------------------------------------------------------------
+CONNECTING JSP WITH JDBC
+
+<%@ page import="java.sql.*"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>WELOCOME TO OUR LOGIN PAGE</title>
+</head>
+<form action="mylogin.jsp" method="post">
+<label for="usernamelbl">Please Enter The username</label>
+<input type="text" name="username" required><br>
+<label for="usernamelbl">Please Enter The password</label>
+<input type="password" name="password" required><br>
+<label for="selectcountry">Please select your country</label>
+<select name="country">
+<option name="India" value="India">INDIA</option>
+<option name="Usa" value="Usa">USA</option>
+<option name="Australia" value="Australia">AUSTRALIA</option>
+<option name="Qatar" value="Qatar">QATAR</option>
+</select><br>
+<label for="usernamelbl">Please Enter Your Mark</label>
+<input type="text" name="Mark" required><br>
+<input type="submit" name="submit" value="submit">
+<input type="reset">
+</form>
+<%!
+class student{
+	String username;
+	String password;
+    String country;
+    int Mark;
+	public void student(String username,String password,String country,int Mark)
+	{
+		this.username=username;
+		this.password=password;
+        this.country=country;
+        this.Mark=Mark;
+	}
+	public boolean validate_student()
+	{
+		dbms connect=null;
+		PreparedStatement stmt=null;
+		Connection con=null;
+		Boolean found=false;
+		try {
+			connect=new dbms("jdbc:mysql://localhost:3307/vit","root", "");
+			con=connect.getConnection();
+			String sql="insert into student value(?,?,?,?");";
+			stmt=con.prepareStatement(sql);
+			stmt.setString(1, username);
+			stmt.setString(2, password);
+			stmt.setString(2, country);
+			stmt.setString(2, Mark);
+            
+			int i=stmt.executeUpdate();
+			if(i==0)
+			{
+				found=false;
+			}
+			else{
+				found= true;
+			}
+
+
+		} catch (Exception e) {
+			//TODO: handle exception
+			System.out.println(e.getMessage());
+		}
+		finally{
+			connect.CloseConnection(con, stmt);
+		}
+		return found;
+		
+	}
+} 
+%!>
+class dbms{
+    private String URL;
+    private String username;
+    private String password;
+    public dbms (String URL,String username,String password) {
+        this.URL=URL;
+        this.username=username;
+        this.password=password;
+    }
+    public Connection getConnection() throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException
+    {
+            Connection con=null;
+            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+            con=DriverManager.getConnection(URL,username, password);
+            System.out.println("Connection is Successfull");
+            return con;
+        
+    }
+    public void CloseConnection(Connection con,PreparedStatement stmt) throws SQLException
+    {
+        con.close();
+        stmt.close();
+        System.out.println("Connection is Closed");
+    }
+
+}
+
+<%
+String sub=submit.getParameter("submit");
+if(sub!=null)
+{
+    String username=request.getParameter("username");
+    String password=request.getParameter("password");
+    String country=request.getParameter("country");
+    String Mark=request.getParameter("Mark");
+    try{
+        student s=new student(username,password,country,Mark);
+        boolean a=s.insertStudent();
+        if(a)
+        {
+            out.println("Yes its been insert");
+        }
+        else{
+            out.println("Wrong Input not Inserted");
+        }
+    }
+    catch(Exception e{
+        out.println(e.getMessage);
+
+    }
+}
+%>
+
+<body>
+</body>
+</html>
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
